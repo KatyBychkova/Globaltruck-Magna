@@ -1,0 +1,30 @@
+{
+    "inputTelStyles": {
+        "boxSizing": "border-box",
+        "height": "60px",
+        "borderColor": "#0b4994",
+        "borderRadius": "0px",
+        "width": "100%",
+        "fontSize": "16px",
+        "color": "#0b4994",
+        "margin": "0px",
+        "fontFamily": "Roboto, Arial, sans-serif",
+        "lineHeight": "21px",
+        "outline": "none"
+    },
+
+    "inputTelStylesError": {
+        "boxSizing": "border-box",
+        "height": "60px",
+        "borderColor": "#d1274a",
+        "boxShadow": "none",
+        "borderRadius": "0px",
+        "width": "100%",
+        "fontSize": "16px",
+        "color": "#0b4994",
+        "margin": "0px",
+        "fontFamily": "Roboto, Arial, sans-serif",
+        "lineHeight": "21px",
+        "outline": "none"
+    }
+}
