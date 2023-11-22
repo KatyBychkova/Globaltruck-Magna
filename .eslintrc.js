@@ -32,6 +32,7 @@ module.exports = {
         'plugin:@next/next/recommended',
     ],
     rules: {
+        'linebreak-style': ['error', 'unix'],
         indent: [ERROR, 4],
         'max-len': [ERROR, {
             code: 120,
@@ -73,4 +74,5 @@ module.exports = {
         'react/react-in-jsx-scope': OFF,
         'react/button-has-type': OFF,
     },
+
 };

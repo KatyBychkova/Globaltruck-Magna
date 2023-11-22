@@ -1,0 +1,199 @@
+.section {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 60px;
+
+    background-color: transparent;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    order: 1;
+    width: 164px;
+    height: 72px;
+    margin-right: 35px;
+}
+
+.telegram {
+    position: relative;
+
+    flex: 0 1 560px;
+    order: 2;
+    padding-left: 32px;
+}
+
+.telegram::before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    /* background-image: url(../../assets/icons/telegram.svg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    content: "";
+}
+
+.telegram_link {
+    color: var(--font-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.tel {
+    display: flex;
+    flex-direction: column;
+    order: 3;
+    min-width: 145px;
+}
+
+.tel_item {
+    align-self: end;
+
+    color: var(--minor-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.callToAction {
+    order: 4;
+    margin-left: 20px;
+}
+
+.callToAction div {
+    padding: 14px 40px;
+
+    background-color: var(--minor-color);
+    border-radius: 5px;
+}
+
+.callToAction_btn {
+    min-width: 180px;
+
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 960px) {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .telegram {
+        flex: 0 1 560px;
+        order: 4;
+        margin-top: 15px;
+        padding-left: 32px;
+    }
+
+    .callToAction {
+        order: 3;
+        margin-left: 20px;
+    }
+
+    .callToAction div {
+        padding: 14px 32px;
+
+        background-color: var(--primary-color);
+        border-radius: 5px;
+    }
+
+    .callToAction_btn {
+        color: var(--minor-color);
+    }
+
+    .tel_item {
+        color: var(--font-color-color);
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding-bottom: 32px;
+    }
+
+    .wrapper {
+        justify-content: space-between;
+    }
+
+    .logo {
+        order: 1;
+    }
+    .callToAction {
+        order: 2;
+        margin-left: 20px;
+    }
+
+    .telegram {
+        flex: 0 1 200px;
+        order: 3;
+    }
+    .tel {
+        order: 4;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding-top: 35px;
+        padding-bottom: 10px;
+    }
+
+    .wrapper {
+        justify-content: space-around;
+    }
+
+    .logo {
+        order: 4;
+        margin: 0;
+    }
+
+    .logo svg {
+        width: 124px;
+        height: 54px;
+    }
+    .callToAction {
+        order: 3;
+
+        margin: 15px 0;
+    }
+
+    .telegram {
+        flex: 0 1 100px;
+        order: 2;
+        margin: 0;
+        padding-left: 25px;
+    }
+    .tel {
+        order: 1;
+    }
+
+    .telegram_link {
+        font-size: 14px;
+    }
+}

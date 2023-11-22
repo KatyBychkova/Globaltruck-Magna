@@ -1,8 +1,8 @@
+import About from '@/components/About/About.jsx';
+
 function MainPage() {
     return (
-        <>
-            <div>Content components...</div>
-        </>
+        <About />
     );
 }
 

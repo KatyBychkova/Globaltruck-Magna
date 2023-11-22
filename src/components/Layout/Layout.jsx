@@ -1,9 +1,11 @@
+// import Header from '../Header/Header.jsx';
+
 function Layout({ children }) {
     return (
         <div>
-            <div>Header component</div>
+            {/* <Header /> */}
             <div>{children}</div>
-            <div>Footer component</div>
+            {/* <Footer /> */}
         </div>
     );
 }

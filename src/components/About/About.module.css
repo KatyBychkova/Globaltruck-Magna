@@ -1,0 +1,168 @@
+.section {
+    background-color: var(--main-bg-color);
+}
+
+.inner {
+    max-width: 1980px;
+    margin: 0 auto;
+    padding-bottom: 95px;
+
+    /* background-image: url(../../assets/images/main-bg.png); */
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.title {
+    max-width: 840px;
+    margin-bottom: 20px;
+
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 56px;
+    text-transform: uppercase;
+}
+
+.title span {
+    color: var(--accent-color);
+}
+
+.subtitle {
+    max-width: 450px;
+    margin-bottom: 30px;
+
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.description {
+    max-width: 580px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+}
+@media screen and (max-width: 1980px) {
+    .inner {
+        background-position: 35vw top;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .inner {
+        background-position: calc(30vw - 10px) top;
+    }
+
+    .title {
+        max-width: 570px;
+
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .subtitle,
+    .description {
+        max-width: 450px;
+
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .inner {
+        padding-bottom: 155px;
+
+        background-position: 30vw top;
+        background-size: cover;
+    }
+
+    .title {
+        max-width: 470px;
+
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .subtitle,
+    .description {
+        max-width: 380px;
+
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .inner {
+        background-position: 20vw top;
+    }
+}
+@media screen and (max-width: 660px) {
+    .inner {
+        background-position: 15vw top;
+    }
+}
+@media screen and (max-width: 640px) {
+    .container {
+        min-height: 950px;
+    }
+    .inner {
+        padding-bottom: 0;
+
+        background-position: center bottom;
+        background-size: 100%;
+    }
+
+    .title {
+        max-width: 100%;
+
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .subtitle,
+    .description {
+        max-width: 100%;
+
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .subtitle {
+        margin-bottom: 20px;
+    }
+
+    .description {
+        padding-bottom: 15px;
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .container {
+        min-height: 920px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container {
+        min-height: 1050px;
+    }
+    .title::after {
+        height: 2px;
+    }
+}
+@media screen and (max-width: 440px) {
+    .container {
+        min-height: 1000px;
+    }
+    .title::after {
+        height: 2px;
+    }
+}
