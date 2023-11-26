@@ -17,9 +17,11 @@ export const content = {
     },
     survey: {
         surveyBlock: {
-            time: 'Это займет всего 15 секунд',
+            speed: 'Это займет всего 15 секунд',
             title: 'Ответь на 5 вопросов',
-            subtitle: 'и узнай, какая из наших вакансий подходит именно Вам',
+            subtitle1: 'и узнай, какая ',
+            subtitle2: 'из наших вакансий',
+            subtitle3: 'подходит именно Вам',
             surveyButton: 'Пройти опрос',
             surveyHeader: 'Узнайте, какая из наших вакансий вам подходит',
             questions: [
@@ -57,7 +59,7 @@ export const content = {
         surveyContacts: {
             telephoneTitle: 'Звони нам',
             telephone: '+7 (909) 096-85-00',
-            eamilTitle: 'Пиши нам',
+            emailTitle: 'Пиши нам',
             email: 'recrutm_mgn01@tk-magna.com',
         },
 
@@ -66,7 +68,7 @@ export const content = {
         terms: 'Политика конфиденциальности',
         developedBy: {
             name: 'Разработано командой «Раппорт»',
-            href: '#',
+            href: 'https://smm-rapport.ru/',
         },
 
         copy: `© ${new Date().getFullYear()} Все права защищены`,
@@ -74,13 +76,12 @@ export const content = {
     callToAction: {
         title: 'Оставь свои контактные данные',
         subtitle: 'И мы свяжемся с тобой',
-        form: {
 
-            placeholderName: 'Имя',
-            placeholderTelephone: 'Телефон',
-            telephoneLabel: 'Город проживания',
-            submitBtnText: 'Отправить данные',
-        },
+    },
+    form: {
+        placeholderName: 'Имя',
+        placeholderTelephone: 'Телефон',
+
     },
     footer: {
         copy: `© ${new Date().getFullYear()} Все права защищены`,

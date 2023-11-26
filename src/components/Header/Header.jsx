@@ -3,54 +3,57 @@ import Link from 'next/link';
 import { content } from '@/config/index.js';
 
 import styles from './Header.module.css';
-// import MagnaLogoIcon from '../../assets/logo/magna';
 import GlobaltrackLogoIcon from '../../assets/logo/globaltruck.svg';
 import MagnaLogoIcon from '../../assets/logo/magna.svg';
-// const { company } = content;
-// const { telegram, contacts, callToAction } = company;
-// const { href } = telegram;
+
+const { telephoneFormatForLink, header } = content;
+const { telephone } = header;
 // const modalType = 'modalForm';
 
 function Header({ openModal, setModal }) {
     return (
         <header className={styles.section}>
-            <div className={styles.wrapper}>
-                <div className={styles.logo}>
-                    <GlobaltrackLogoIcon height="72" />
-                </div>
-                <div className={styles.logo}>
-                    <MagnaLogoIcon height="72" />
-                </div>
-                {/* <div className={styles.telegram}>
-                    <Link className={styles.telegram_link} href={href}>
-                        {telegram.name}
-                    </Link>
-                </div>
-                <div className={styles.tel}>
-                    {contacts.map((item) => (
-                        <Link
-                            key={item}
-                            className={styles.tel_item}
-                            href={`tel:${item}`}
-                        >
-                            {item}
-                        </Link>
-                    ))}
-                </div> */}
+            <div className={styles.inner}>
 
-                {/* <div className={styles.callToAction}>
-                    <div>
-                        <button
-                            className={styles.callToAction_btn}
-                            onClick={() => {
-                                openModal(true);
-                                setModal(modalType);
-                            }}
-                        >
-                            {callToAction.text}
-                        </button>
+                <div className={styles.wrapper}>
+
+                    <div className={styles.logosWrapper}>
+                        <div className={styles.logo1}>
+                            <MagnaLogoIcon height="40" />
+                        </div>
+                        <div className={styles.logo2}>
+                            <GlobaltrackLogoIcon height="40" />
+                        </div>
+
                     </div>
-                </div> */}
+
+                    <div className={styles.contactWrapper}>
+
+                        <div className={styles.callToAction}>
+                            <div className={styles.callToActionButtonWrapper}>
+                                <button
+                                    className={styles.callToActionButton}
+                                    onClick={() => {
+                                        openModal(true);
+                                        setModal(modalType);
+                                    }}
+                                >
+                                    text
+                                </button>
+                            </div>
+                        </div>
+                        <div className={styles.telephone}>
+                            <Link
+                                className={styles.telephoneLink}
+                                href={`tel:${telephoneFormatForLink}`}
+                            >
+                                {telephone}
+                            </Link>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </header>
     );

@@ -1,10 +1,75 @@
-/* @font-face {
+@font-face {
     font-weight: 400;
     font-family: "Gilroy";
     font-style: normal;
     src: local("Gilroy Regular"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
-} */
+}
 
+@font-face {
+    font-weight: 700;
+    font-family: "Gilroy";
+    font-style: normal;
+    src: local("Gilroy Bold"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-weight: 900;
+    font-family: "Gilroy";
+    font-style: normal;
+    src: local("Gilroy Black"), url("../fonts/Gilroy-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-weight: 300;
+    font-family: "Gilroy";
+    font-style: normal;
+    src: local("Gilroy Light"), url("../fonts/Gilroy-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-weight: 600;
+    font-family: "Gilroy";
+    font-style: normal;
+    src: local("Gilroy Semibold"), url("../fonts/Gilroy-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+    font-weight: 500;
+    font-family: "Gilroy";
+    font-style: normal;
+    src: local("Gilroy Medium"), url("../fonts/Gilroy-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-weight: 200;
+    font-family: "Gilroy";
+    font-style: normal;
+    src: local("Gilroy UltraLight"), url("../fonts/Gilroy-UltraLight.ttf") format("truetype");
+}
+
+@font-face {
+    font-weight: 800;
+    font-family: "Gilroy";
+    font-style: normal;
+    src: local("Gilroy Extrabold"), url("../fonts/Gilroy-Extrabold.ttf") format("truetype");
+}
+
+@font-face {
+    font-weight: 900;
+    font-family: "Gilroy";
+    font-style: normal;
+    src: local("Gilroy Heavy"), url("../fonts/Gilroy-Heavy.ttf") format("truetype");
+}
+
+@font-face {
+    font-weight: 100;
+    font-family: "Gilroy";
+    font-style: normal;
+    src: local("Gilroy Thin"), url("../fonts/Gilroy-Thin.ttf") format("truetype");
+}
+
+
+/* 
 @font-face {
     font-weight: 100;
     font-family: 'MuseoSansCyrl';
@@ -13,30 +78,30 @@
     src: local('MuseoSansCyrl-100'), url('../fonts/MuseoSansCyrl-100.ttf') format('truetype');
 }
 @font-face {
-    font-weight: 500;
-    font-family: 'MuseoSansCyrl-300';
+    font-weight: 300;
+    font-family: 'MuseoSansCyrl';
     font-style: normal;
     
     src: local('MuseoSansCyrl-300'), url('../fonts/MuseoSansCyrl-300.ttf') format('truetype');
 }
 @font-face {
     font-weight: 500;
-    font-family: 'MuseoSansCyrl-500';
+    font-family: 'MuseoSansCyrl';
     font-style: normal;
     
     src: local('MuseoSansCyrl-500'), url('../fonts/MuseoSansCyrl-500.ttf') format('truetype');
 }
 @font-face {
-    font-weight: 500;
-    font-family: 'MuseoSansCyrl-700';
+    font-weight: 700;
+    font-family: 'MuseoSansCyrl';
     font-style: normal;
 
     src: local('MuseoSansCyrl-700'), url('../fonts/MuseoSansCyrl-700.ttf') format('truetype');
 }
 @font-face {
-    font-weight: 500;
-    font-family: 'MuseoSansCyrl-900';
+    font-weight: 900;
+    font-family: 'MuseoSansCyrl';
     font-style: normal;
     
     src: local('MuseoSansCyrl-900'), url('../fonts/MuseoSansCyrl-900.ttf') format('truetype');
-}
+}  */

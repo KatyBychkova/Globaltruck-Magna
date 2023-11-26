@@ -1,16 +1,22 @@
 .section {
-    background-color: var(--main-bg-color);
+    box-sizing: border-box;
+
+   
+    background-image: url(../../assets/images/main-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover
 }
 
 .inner {
-    max-width: 1980px;
+    max-width: 1920px;
     margin: 0 auto;
-    padding-bottom: 95px;
+    
+    overflow: hidden;
 
-    /* background-image: url(../../assets/images/main-bg.png); */
+    background-image: url(../../assets/images/main-image.png);
     background-repeat: no-repeat;
-    background-position: right top;
-    background-size: contain;
+    background-position: top 40px center;
+    background-size: cover;
 }
 
 .container {
@@ -20,149 +26,273 @@
     overflow: hidden;
 }
 
-.title {
-    max-width: 840px;
-    margin-bottom: 20px;
 
-    color: var(--primary-color);
-    font-weight: 800;
-    font-size: 56px;
-    line-height: 56px;
-    text-transform: uppercase;
+.content{
+    display: flex;
+
+    justify-content: flex-end;
+    width: 100%;
+    padding-bottom: 20px;
 }
 
-.title span {
-    color: var(--accent-color);
+.description{
+    flex: 1 1 50%;
+    max-width: 550px;
+    margin-top: 60px;
+    margin-bottom: 230px;
+}
+
+.descriptionWithTitle{
+    margin-bottom: 80px;
+}
+
+.title {
+    margin-bottom: 20px;
+
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 37px;
+    
 }
 
 .subtitle {
-    max-width: 450px;
     margin-bottom: 30px;
 
-    color: var(--accent-color);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 31px;
+    color: var(--main-color);
+    font-weight: 800;
+    font-size: 66px;
+    line-height: 70px;
 }
 
-.description {
-    max-width: 580px;
+.descriptionWithPositivePoint{
+    display: flex;
 
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 26px;
+    flex: 0 0 50%;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+   
+    padding: 55px;
+
+    font-weight: 400;
+
+    font-size: 28px;
+
+
+    line-height: 38px;
+    
+    background-color: #fff;
+    border-radius: 10px;
 }
-@media screen and (max-width: 1980px) {
+
+.positivePointAllText{
+    margin-bottom: 40px;
+}
+
+.positivePoint{
+    color: var(--main-color);
+    font-weight: 800;
+}
+
+.callToActionButton{
+    display: block;
+    width: 360px;
+    height: 100px;
+    padding: 0px 15px;
+  
+
+    color: transparent;
+
+
+    text-decoration: none;
+
+    background-color: transparent;
+    background-image: url(../../assets/images/send-form-button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
     .inner {
-        background-position: 35vw top;
+        background-position: top 40px left -25vw;
     }
+  
 }
+
+
 @media screen and (max-width: 1200px) {
     .inner {
-        background-position: calc(30vw - 10px) top;
-    }
-
-    .title {
-        max-width: 570px;
-
-        font-size: 40px;
-        line-height: 40px;
-    }
-
-    .subtitle,
-    .description {
-        max-width: 450px;
-
-        font-size: 16px;
-        line-height: 21px;
-    }
-}
-@media screen and (max-width: 960px) {
-    .inner {
-        padding-bottom: 155px;
-
-        background-position: 30vw top;
-        background-size: cover;
-    }
-
-    .title {
-        max-width: 470px;
-
-        font-size: 36px;
-        line-height: 36px;
-    }
-
-    .subtitle,
-    .description {
-        max-width: 380px;
-
-        font-size: 16px;
-        line-height: 21px;
-    }
-}
-@media screen and (max-width: 750px) {
-    .inner {
-        background-position: 20vw top;
-    }
-}
-@media screen and (max-width: 660px) {
-    .inner {
-        background-position: 15vw top;
-    }
-}
-@media screen and (max-width: 640px) {
-    .container {
-        min-height: 950px;
-    }
-    .inner {
-        padding-bottom: 0;
-
-        background-position: center bottom;
-        background-size: 100%;
-    }
-
-    .title {
-        max-width: 100%;
-
-        font-size: 32px;
-        line-height: 32px;
-    }
-
-    .subtitle,
-    .description {
-        max-width: 100%;
-
-        font-size: 16px;
-        line-height: 21px;
-    }
+        background-position: top 40px left -22vw;
+    } 
 
     .subtitle {
-        margin-bottom: 20px;
+        font-size: 60px;
+        line-height: 66px;
     }
 
-    .description {
-        padding-bottom: 15px;
-        padding-left: 20px;
+    .description{
+        max-width: 520px;
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+
+    .descriptionWithTitle{
+        margin-bottom: 50px;
+    }
+
+    .descriptionWithPositivePoint{   
+        padding: 40px;
     }
 }
-@media screen and (max-width: 540px) {
-    .container {
-        min-height: 920px;
+
+
+@media screen and (max-width: 1100px) {
+    .inner {
+        background-position: top 40px left -35vw;
+    } 
+}
+
+@media screen and (max-width: 960px) {
+    .section {
+        background-position: left 35% bottom; 
+    }
+
+    .inner {
+        min-height: 1440px;
+ 
+        background-position: left 6vw bottom; 
+        background-size: 110% ;
+    }   
+
+    .content{
+        display: block;
+         
+    }
+    
+}
+
+@media (max-width: 740px) {
+    .inner {
+        min-height: 1400px;
+
+        background-position: left bottom;
+    
+        background-size: 125% ; 
+   
+    }  
+}
+
+@media (max-width: 640px) {
+    .description{  
+        margin-top: 10px;      
+    }
+
+    .inner {
+        min-height: 1200px;
+
+        background-size: 145%;    
+    }  
+
+    .title {
+        margin-bottom: 18px;
+    
+        font-size: 20px;
+        line-height: 31px;        
+    }
+    
+    .subtitle {    
+        margin-bottom: 10px;
+         
+        font-size: 53px;
+        line-height: 48px;
+    }
+
+    .descriptionWithPositivePoint{
+        padding: 30px;
+       
+    }
+    
+    .positivePointAllText{
+        margin-bottom: 30px;
     }
 }
-@media screen and (max-width: 480px) {
-    .container {
-        min-height: 1050px;
-    }
-    .title::after {
-        height: 2px;
-    }
+
+
+@media (max-width: 560px) {
+    .inner { 
+        background-size: 165% ;
+    }  
 }
-@media screen and (max-width: 440px) {
-    .container {
-        min-height: 1000px;
+
+@media (max-width: 480px) {
+    .description{
+  
+        margin-top: 0px;
+      
     }
-    .title::after {
-        height: 2px;
+    .inner {
+        min-height: 1100px;
+
+        background-size: 155% ; 
+   
+    }  
+    .descriptionWithTitle{
+        margin-bottom: 20px;
     }
+    .title {
+        width: 250px;
+
+        margin-bottom: 6px;
+    
+        font-size: 24px;
+        line-height: 37px;
+        
+    }
+    
+    .subtitle {
+        width: 220px;
+             
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .positivePointAllText{
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .descriptionWithPositivePoint {
+        padding: 20px;
+    }
+    .callToActionButton{
+        width: 300px;
+        height: 87px;
+   
+    }
+
+}
+
+@media (max-width: 440px) {
+    .inner {
+        min-height: 1100px; 
+
+        background-position: left 10% bottom;
+
+        background-size: 175% ;
+    }  
+    
+}
+
+@media (max-width: 340px) {
+    .callToActionButton{
+        width: 100%;
+        max-width: 300px;
+        height: 87px;
+   
+    }
+    
 }

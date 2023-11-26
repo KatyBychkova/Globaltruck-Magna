@@ -44,9 +44,7 @@ select {
 }
 
 body {
-    color: var(--text-color);
-    font-weight: 300;
-    font-size: 16px;
-    font-family: "Roboto", "Arial", sans-serif;
-    line-height: 21px;
+
+     font-family:'Gilroy',Arial,sans-serif;
+  
 }

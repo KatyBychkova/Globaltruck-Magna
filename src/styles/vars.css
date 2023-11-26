@@ -1,14 +1,10 @@
 :root {
     --main-color: #333ee6;
-    --minor-color: #linear-gradient(318deg, rgba(25,121,242,1) 0%, rgba(64,181,251,1) 100%);
-     /*--container-width: 1250px;
+    --minor-color: #4a4a4a;
+    --gradient: linear-gradient(318deg, rgba(25,121,242,1) 0%, rgba(64,181,251,1) 100%);
+    --container-width: 1180px;
     --content-width: 960px;
-    --title-primary-color: #043a7c;
-    --title-minor-color: #0b4994;
-    --title-font-size: 42px;
-    --title-line-height: 42px;
-    --text-color: #000;
-} */
+} 
 
 @media (max-width: 1200px) {
     :root {
@@ -21,8 +17,7 @@
     :root {
         --container-width: 630px;
         --content-width: 630px;
-        --title-font-size: 38px;
-        --title-line-height: 38px;
+    
     }
 }
 
@@ -30,15 +25,13 @@
     :root {
         --container-width: 520px;
         --content-width: 520px;
-        --title-font-size: 30px;
-        --title-line-height: 30px;
+      
     }
 }
 
 @media (max-width: 480px) {
     :root {
-        --container-width: 450px;
-        --content-width: 450px;
+        --container-width: 340px;
+        --content-width: 340px;
     }
-}
 }
