@@ -1,7 +1,11 @@
+import { useState } from 'react';
+
 import { content } from '@/config/index.js';
 import Header from '@/components/Header/Header.jsx';
 
 import styles from './About.module.css';
+import Form from '../Form/Form.jsx';
+import Modal from '../Modal/Modal.jsx';
 
 const { about } = content;
 const {
@@ -11,12 +15,24 @@ const {
 } = about;
 const { offer1, positivePoint, offer2 } = callToActionOffer;
 
-function About({ openModal, setModal }) {
+function About() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isShowModal, setIsShowModal] = useState(false);
+
+    const handleClose = () => {
+        setIsShowModal(false);
+    };
+
+    const handleSubmitted = () => {
+        setIsSubmitted(true);
+        setIsShowModal(false);
+    };
+
     return (
         <section className={styles.section}>
             <div className={styles.inner}>
                 <div className={styles.container}>
-                    <Header openModal={openModal} setModal={setModal} />
+                    <Header />
 
                     <div className={styles.content}>
                         <div className={styles.description}>
@@ -41,13 +57,19 @@ function About({ openModal, setModal }) {
                                     <button
                                         className={styles.callToActionButton}
                                         onClick={() => {
-                                            openModal(true);
-                                            setModal(modalType);
+                                            setIsShowModal(true);
                                         }}
                                     >
                                         text
                                     </button>
                                 </div>
+                                <Modal isVisible={isShowModal} onClose={handleClose}>
+                                    <Form
+                                        isSubmitted={isSubmitted}
+                                        onSubmitted={handleSubmitted}
+                                    />
+                                </Modal>
+
                             </div>
                         </div>
                     </div>

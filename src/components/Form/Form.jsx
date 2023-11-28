@@ -75,22 +75,6 @@ function Form({ onSubmitted }) {
         }));
     };
 
-    // const handleNameChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setData((prev) => ({
-    //         ...prev,
-    //         [name]: value,
-    //     }));
-    // };
-
-    // const handleTelChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setData((prev) => ({
-    //         ...prev,
-    //         [name]: value,
-    //     }));
-    // };
-
     const validate = () => {
         const validatorErrors = validator(data, validatorConfig);
         setErrors(validatorErrors);
@@ -113,7 +97,7 @@ function Form({ onSubmitted }) {
         // eslint-disable-next-line no-console
         console.log(JSON.stringify(data));
 
-        onSubmitted(true);
+        onSubmitted(true); // устанавливает значение IsSubmitted(true) в About
 
         cleanForm();
     };

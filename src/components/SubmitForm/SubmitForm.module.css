@@ -1,0 +1,70 @@
+.container {
+    position: relative;
+    top: 0;
+    right: auto;
+    left: auto;
+    z-index: 1;
+
+    display: flex;
+    height: max-content;
+    margin: 0 auto;
+    margin-top: 40vh;
+
+    background-color: #fff;
+    border-radius: 15px;
+    cursor: default;
+}
+
+.content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    padding: 40px;
+}
+
+.text {
+    text-align: center;
+}
+
+.icon_wrapper {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.close_btn button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.closeCross {
+    width: 14px;
+    height: 14px;
+    padding: 6px;
+
+    color: #000;
+}
+
+
+@media screen and (max-width: 560px) {
+    div.modal {
+        display: block;
+        padding-top: 70px;
+        padding-right: 0;
+        padding-left: 0;
+
+        border: 2px solid red;
+    }
+
+    .container {
+        max-width: 300px;
+        margin-top: 20vh;
+    }
+}
