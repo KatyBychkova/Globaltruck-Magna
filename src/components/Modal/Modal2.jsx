@@ -5,11 +5,10 @@ import {
 } from 'tua-body-scroll-lock';
 
 import CrossIcon from '../../assets/icons/cross.svg';
-import SubmitIcon from '../../assets/icons/submit.svg';
 import CloseButton from './CloseButton.jsx';
-import styles from './ModalSubmitted.module.css';
+import styles from './Modal.module.css';
 
-function ModalSubmitted({ isVisible, onClose }) {
+function Modal({ isVisible, onClose, children }) {
     useEffect(() => {
         if (isVisible) {
             scrollLock();
@@ -23,17 +22,13 @@ function ModalSubmitted({ isVisible, onClose }) {
     }
 
     return (
-
-        <div className={styles.container} onClick={onClose}>
-            <div className={styles.wrapper} onClick={(e) => e.stopPropagation()}>
-                <div className={styles.content}>
-                    <div className={styles.icon_wrapper}>
-                        <SubmitIcon height="50" />
+        <div className={styles.main} onClick={onClose}>
+            <div className={styles.container}>
+                <div className={styles.wrapper} onClick={(e) => e.stopPropagation()}>
+                    <div>
+                        { children }
                     </div>
-                    <div className={styles.text}>
-                        Спасибо! Данные успешно отправлены!
-                    </div>
-                    <div className={styles.close_btn}>
+                    <div className={styles.closeBtn}>
                         <CloseButton onClose={onClose}>
                             <CrossIcon className={styles.closeCross} />
                         </CloseButton>
@@ -43,5 +38,4 @@ function ModalSubmitted({ isVisible, onClose }) {
         </div>
     );
 }
-
-export default ModalSubmitted;
+export default Modal;

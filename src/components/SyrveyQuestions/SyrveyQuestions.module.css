@@ -1,0 +1,58 @@
+/* .t-popup__container {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    left: 20px;
+    z-index: 1;
+
+    width: auto;
+    margin: 0 auto;
+
+    background: #fff;
+
+    transform: translateY(-30%) scale(.9);
+    cursor: default
+}
+
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+    .t-popup__container {
+        width: 100%
+    }
+} */
+
+
+.section {
+    height: 1000px;
+  
+    padding: 15px 0;
+
+    background-color: #badda377;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    max-width: var(--content-width);
+   
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+
+    color: #000;
+    font-size: 15px;
+
+}
+
+.container1{
+
+}
+
+
+
+.copy {
+    font-weight: 400;
+    font-size: 18px;
+}

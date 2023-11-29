@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 import { content } from '@/config/index.js';
 
@@ -9,6 +10,11 @@ const { callToAction } = content;
 const { title, subtitle } = callToAction;
 
 function CallToAction() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleSubmitted = () => {
+        setIsSubmitted(true);
+    };
     return (
         <section className={`${styles.section} ${styles.container}`}>
             <div className={styles.wrapper}>

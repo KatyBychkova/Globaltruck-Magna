@@ -23,37 +23,59 @@ export const content = {
             subtitle2: 'из наших вакансий',
             subtitle3: 'подходит именно Вам',
             surveyButton: 'Пройти опрос',
-            surveyHeader: 'Узнайте, какая из наших вакансий вам подходит',
+            SurveyDescription: 'Узнайте, какая из наших вакансий вам подходит',
             questions: [
                 {
-                    question1: 'Ваш опыт работы по категории Е:',
-                    answers: ['до 1 года', '1-2 года', '2-5 лет', 'более 5 лет'],
+                    question: 'Ваш опыт работы по категории Е:',
+                    answerOptions: [
+                        { answer: 'до 1 года' },
+                        { answer: '1-2 года' },
+                        { answer: '2-5 лет' },
+                        { answer: 'более 5 лет' },
+                    ],
                 },
                 {
-                    question2: 'Какая продолжительность рейсов для вас комфортнее?',
-                    answers: ['до 1 недели', '1-2 недели', 'более 1 месяца'],
+                    question: 'Какая продолжительность рейсов для вас комфортнее?',
+                    answerOptions: [
+                        { answer: 'до 1 недели' },
+                        { answer: '1-2 недели' },
+                        { answer: 'более 1 месяца' },
+                    ],
                 },
                 {
-                    question3: 'Какое направление доставки Вам наиболее интересно?',
-                    answers: ['Рейсы по России', 'Международные рейсы', 'Короткие рейсы недалеко от базы'],
+                    question: 'Какое направление доставки Вам наиболее интересно?',
+                    answerOptions: [
+                        { answer: 'Рейсы по России' },
+                        { answer: 'Международные рейсы' },
+                        { answer: 'Короткие рейсы недалеко от базы' },
+                    ],
                 },
                 {
-                    question4: 'Из какого города вам ближе всего начинать рейс?',
-                    answers: ['Магнитогорск', 'Уфа', 'Самара'],
+                    question: 'Из какого города вам ближе всего начинать рейс?',
+                    answerOptions: [
+                        { answer: 'Магнитогорск' },
+                        { answer: 'Уфа' },
+                        { answer: 'Самара' },
+                    ],
                 },
                 {
                     question: 'Какой вид связи предпочитаете?',
-                    answers: ['Телефон', 'WhatsApp', 'Viber'],
+                    answerOptions: [
+                        { answer: 'Телефон' },
+                        { answer: 'WhatsApp' },
+                        { answer: 'Viber' },
+                    ],
                 },
 
             ],
-            butttonNext: 'Далее',
-            butttonPrevious: 'Назад',
+            butttonNextText: 'Далее',
+            butttonPreviousText: 'Назад',
+            submitButttonText: 'Узнать результат',
             surveyForm: {
                 placeholderName: 'Фамилия и имя',
                 placeholderTelephone: '+7 (999) 999-99-99',
                 placeholderCity: 'Выберите страну и введите номер',
-                submitBtnText: 'Узнать результат',
+
             },
         },
         surveyContacts: {
@@ -76,8 +98,9 @@ export const content = {
     callToAction: {
         title: 'Оставь свои контактные данные',
         subtitle: 'И мы свяжемся с тобой',
-
+        afterSubmitText: 'Спасибо! Данные успешно отправлены.',
     },
+
     form: {
         placeholderName: 'Имя',
         placeholderTelephone: 'Телефон',
