@@ -30,29 +30,258 @@
 }
 
 .wrapper {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
 
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    /* position: absolute;
+    top: 50%;
+    right: 20px;
+    left: 20px;
+    z-index: 1; */
+
+    width: 780px;
     max-width: var(--content-width);
+    min-height: 464px;
+  
    
     margin: 0 auto;
-    padding: 0 15px;
+  
+    
     overflow: hidden;
 
     color: #000;
-    font-size: 15px;
+
+    background: #fff;
+
+    /* transform: translateY(-30%) scale(.9); */
+    cursor: default;
+ 
 
 }
 
-.container1{
+.container{
 
+    max-width: 780px;
+    /* position: absolute;
+    top: 50%;
+    right: 20px;
+    left: 20px;
+    z-index: 1; */
+    min-height: 464px;
+    
+    margin: 0 auto;
+
+    background: #fff;
+
+    /* transform: translateY(-30%) scale(.9); */
+    cursor: default
 }
 
+.surveyTop {
+    display: flex;
 
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
 
-.copy {
+    padding-top: 35px;
+    padding-right: 45px;
+    padding-bottom: 40px;
+    padding-left: 45px;
+
+    background-color: #ececec;
+}
+
+.surveyContent{
+    box-sizing: border-box;
+    width: 100%;
+    height: 285px;
+    min-height: 185px;
+    padding-top: 35px;
+    padding-right: 45px;
+    padding-bottom: 40px;
+    padding-left: 45px;
+}
+
+.surveyButtons{
+    padding-top: 35px;
+    padding-right: 45px;
+    padding-bottom: 40px;
+    padding-left: 45px;
+}
+.surveyDescription{
+    position: relative;
+
+    padding-left: 22px;
+
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.surveyDescription::before{
+    position: absolute;
+    top: 60%;
+    left: 0;
+
+    display: block;
+
+    width: 20px;
+    height:20px;
+
+    background-image: url(../../assets/icons/surveyDescriptionIcon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateY(-65%);
+
+    content: ""
+}
+
+.questionCounter{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.surveyContent{
+    width: 100%;
+
+    padding-top: 35px;
+    padding-right: 45px;
+    padding-bottom: 40px;
+    padding-left: 45px;
+
+    background-color: #fff;
+}
+
+.question{
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+
     font-weight: 400;
-    font-size: 18px;
+    font-size: 24px;
+    line-height: 1.5;
 }
+
+.answers{
+    display: flex;
+    flex-direction: column;
+   
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.answer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+
+    font-size: 15px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+/* .butttonPreviousWrapper, .butttonNextWrapper {
+    position: relative;
+
+    width: 120px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+   
+    border: none;
+    border-radius: 30px;
+   
+
+} */
+
+.butttonNext, .butttonPrevious{
+    position: relative;
+
+    width: 120px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    color: #fff;
+
+    font-weight: 700;
+    font-size: 14px;
+ 
+
+    background-color: transparent;
+   
+    border: none;
+    border-radius: 30px;
+
+    cursor: pointer;
+}
+
+
+.butttonPreviousWrapper{
+   
+}
+
+.butttonNextWrapper{
+    text-align: right;
+
+ 
+}
+
+.butttonPrevious{
+    padding-left: 20px;
+
+    background-color:  #ececec;
+
+}
+.butttonNext{
+    padding-right: 20px;
+
+    background-color:  #007dfd;
+}
+
+
+.butttonPrevious::before{
+    position: absolute;
+    top: 50%;
+   
+
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3;
+
+   
+    border: solid 1px red;
+    transform: rotate(180deg) translateX(150%) translateY(50%);
+
+    content: " →";
+}
+
+.butttonNext::after{
+    position: absolute;
+    top: 50%;
+    right: 0px;
+
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3;
+
+
+
+    transform: translateX(-100%) translateY(-50%);
+
+    content: " →";
+}
+
+
+
+
