@@ -1,0 +1,66 @@
+.content {
+    width: 1800px;
+    max-width: 800px;
+}
+
+.title {
+    margin-bottom: 20px;
+
+    color: #000;
+}
+
+.titleText {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+.titleAttrubutes {
+    display: block;
+}
+
+.paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.55;
+    text-align: left;
+}
+
+.agreement {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.45;
+}
+
+@media screen and (max-width: 1600px) {
+    .content {
+        max-width: 60vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .titleText {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .titleText {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .wrapper {
+        /* width: 100%; */
+        height: auto;
+    }
+
+    .content {
+        max-width: 80vw;
+        height: 100%;
+
+        background-color: #fff;
+    }
+}

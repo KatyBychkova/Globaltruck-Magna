@@ -1,11 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 import { content } from '@/config/index.js';
 import surveyBgImage from '@/assets/images/survey-image.png';
 import surveySpeedIcon from '@/assets/icons/speed.svg';
 
 import styles from './Survey.module.css';
+import Modal from '../Modal/Modal';
+import SyrveyQuestions from './SyrveyQuestions';
 
 const { survey, telephoneFormatForLink } = content;
 const { surveyContacts, surveyBlock } = survey;
@@ -18,6 +21,12 @@ const {
 const modalType = 'modalForm';
 
 function Survey({ openModal, setModal }) {
+    const [isShowModal, setIsShowModal] = useState(true);
+
+    const handleClose = () => {
+        setIsShowModal(false);
+    };
+
     return (
         <section className={styles.section}>
             <div className={styles.container}>
@@ -98,6 +107,10 @@ function Survey({ openModal, setModal }) {
                         </Link>
                     </div>
                 </div>
+                <Modal isVisible={isShowModal} onClose={handleClose}>
+                    <SyrveyQuestions onClose={handleClose} />
+                </Modal>
+
             </div>
         </section>
     );

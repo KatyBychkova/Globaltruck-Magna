@@ -15,6 +15,10 @@ function validate(validateMethod, data, config) {
         statusValidate = !emailRegExp.test(data);
         break;
     }
+    case 'isChecked': {
+        statusValidate = false;
+        break;
+    }
 
     default: {
         break;
