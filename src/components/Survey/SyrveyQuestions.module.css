@@ -259,6 +259,29 @@
     content: " →";
 }
 
+.butttonNextWithoutArrow{
+    
+    width: 120px;
+    padding-top: 12px;
+   
+    padding-bottom: 12px;
+
+    color: #fff;
+
+    font-weight: 700;
+    font-size: 14px;
+ 
+
+    background-color: transparent;
+
+    background-color:  #007dfd;
+   
+    border: none;
+    border-radius: 30px;
+
+    cursor: pointer;
+}
+
 
 /* .answerInput:after {
     position: relative;

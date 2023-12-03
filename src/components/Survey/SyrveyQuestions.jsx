@@ -104,7 +104,6 @@ function SyrveyQuestions() {
                                         name={answerItem.answer}
                                         type="radio"
                                         value={answerItem.answer}
-                                        // onChange={(e) => handleAnswerOption(e)}
                                         onChange={(e) => handleAnswerOption(answerItem.answer)}
                                     />
                                     <p className={styles.answerText}>{answerItem.answer}</p>
@@ -140,14 +139,14 @@ function SyrveyQuestions() {
                             </button> */}
 
                             <button
-                                className={styles.butttonNext}
+                                className={currentQuestion + 1 === questions.length ? styles.butttonNextWithoutArrow : styles.butttonNext}
                                 onClick={
                                     currentQuestion + 1 === questions.length
                                         ? handleSubmitButton
                                         : handleNext
                                 }
                             >
-                                {currentQuestion + 1 === questions.length ? submitButttonText : butttonNextText }
+                                {butttonNextText }
                             </button>
 
                         </div>
