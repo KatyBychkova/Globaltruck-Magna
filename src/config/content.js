@@ -70,19 +70,21 @@ export const content = {
             ],
             butttonNextText: 'Далее',
             butttonPreviousText: 'Назад',
-            submitButttonText: 'Узнать результат',
-            surveyForm: {
-                placeholderName: 'Фамилия и имя',
-                placeholderTelephone: '+7 (999) 999-99-99',
-                placeholderCity: 'Выберите страну и введите номер',
-
-            },
         },
         surveyContacts: {
             telephoneTitle: 'Звони нам',
             telephone: '+7 (909) 096-85-00',
             emailTitle: 'Пиши нам',
             email: 'recrutm_mgn01@tk-magna.com',
+        },
+        formAfterSurvey: {
+            placeholderName: 'Фамилия и имя',
+            labelTelephone: 'Выберите страну и введите номер',
+
+            placeholderTelephone: '+7 (999) 999-99-99',
+
+            submitButttonText: 'Узнать результат',
+
         },
 
     },

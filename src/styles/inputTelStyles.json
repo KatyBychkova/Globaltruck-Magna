@@ -2,15 +2,17 @@
     "inputTelStyles": {
         "boxSizing": "border-box",
         "height": "60px",
-        "borderColor": "#0b4994",
         "borderRadius": "0px",
+        "border": "transparent",
+        "borderBottom": "2px solid #b3b3b3 !important",
         "width": "100%",
         "fontSize": "16px",
-        "color": "#0b4994",
+        "color": "#000",
         "margin": "0px",
         "fontFamily": "Roboto, Arial, sans-serif",
         "lineHeight": "21px",
         "outline": "none"
+      
     },
 
     "inputTelStylesError": {

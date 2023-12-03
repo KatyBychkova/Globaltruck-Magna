@@ -32,17 +32,20 @@
 
 }
 
-.answersError{
+.errorAnswers{
     padding: 10px;
 
     border: solid 1px red;
 }
 
-.container{
-    max-width: 900px;     
+.container{  
+    display: flex;
+    width: 900px;
+    max-width: 90vw;
                       
     min-height: 464px;
     margin: 0 auto;
+ 
 
     background: #fff;
 
@@ -50,10 +53,21 @@
     cursor: default
 }
 .wrapper{
-    width: 70vw;
+    width: 100%;
+
+
 }
 
-.surveyTop {
+.contactForm{
+    padding-top: 35px;
+    padding-right: 45px;
+
+    padding-left: 45px;
+
+    background-color: #fff;
+}
+
+.surveyTop, .surveyTopInContactForm {
     display: flex;
 
     justify-content: space-between;
@@ -66,6 +80,12 @@
     padding-left: 45px;
 
     background-color: #ececec;
+}
+
+.surveyDescriptionInContactForm{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 .surveyContent{
