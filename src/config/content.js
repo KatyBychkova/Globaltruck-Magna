@@ -86,6 +86,7 @@ export const content = {
             submitButttonText: 'Узнать результат',
 
         },
+        afterSubmitText: 'Спасибо! Данные успешно отправлены.',
 
     },
     infopanel: {

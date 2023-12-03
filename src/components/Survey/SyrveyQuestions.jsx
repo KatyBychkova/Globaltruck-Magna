@@ -7,7 +7,7 @@ import styles from './SyrveyQuestions.module.css';
 import ContactForm from './ContactForm.jsx';
 
 const { survey } = content;
-const { surveyBlock } = survey;
+const { surveyBlock, afterSubmitText } = survey;
 const {
     SurveyDescription, questions, butttonNextText, butttonPreviousText,
 } = surveyBlock;
@@ -82,14 +82,22 @@ function SyrveyQuestions() {
                         </div>
                         <div className={styles.contactForm}>
 
-                            <ContactForm
-                                allAnswers={allAnswers}
-                                butttonPreviousText={butttonPreviousText}
-                                isClickPrevious={isClickPrevious}
-                                isSubmitted={isSubmitted}
-                                onClickPrevious={handlePrevious}
-                                onSubmitted={handleSubmitted}
-                            />
+                            {!isSubmitted ? (
+                                <ContactForm
+                                    allAnswers={allAnswers}
+                                    butttonPreviousText={butttonPreviousText}
+                                    isClickPrevious={isClickPrevious}
+                                    isSubmitted={isSubmitted}
+                                    onClickPrevious={handlePrevious}
+                                    onSubmitted={handleSubmitted}
+                                />
+                            ) : (
+                                <div className={styles.afterSubmit}>
+                                    <div className={styles.afterSubmitText}>
+                                        {afterSubmitText}
+                                    </div>
+                                </div>
+                            )}
 
                         </div>
                     </>
@@ -155,14 +163,14 @@ function SyrveyQuestions() {
                                         className={styles.butttonNextWithoutArrow}
                                         onClick={handleSubmitSurveyButton}
                                     >
-                                        "пятый вопрос"
+                                        {butttonNextText}
                                     </button>
                                 ) : (
                                     <button
-                                        className={styles.butttonNextWithoutArrow}
+                                        className={styles.butttonNext}
                                         onClick={handleNext}
                                     >
-                                        "1-4 вопрос"
+                                        {butttonNextText}
                                     </button>
                                 )}
 
