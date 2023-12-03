@@ -27,16 +27,19 @@ function SyrveyQuestions() {
     const [allAnswers, setAllAnswers] = useState({});
     const [noAnswer, setNoAnswer] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [isClickPrevious, setIsClickPrevious] = useState(false);
+    const [progress, setProgress] = useState(0);
 
     const handlePrevious = () => {
         const prevQues = currentQuestion - 1;
+
         prevQues >= 0 && setCurrentQuestion(prevQues);
         setShowContactForm(false);
     };
 
     const handleNext = () => {
         const nextQues = currentQuestion + 1;
+        setProgress(100 / questions.length * (currentQuestion + 1));
+
         if (currentQuestion + 1 === questions.length) {
             setShowContactForm(true);
         }
@@ -62,7 +65,6 @@ function SyrveyQuestions() {
 
     const handleSubmitSurveyButton = () => {
         setShowContactForm(true);
-        // console.log(JSON.stringify(allAnswers));
     };
 
     const handleSubmitted = () => {
@@ -78,15 +80,14 @@ function SyrveyQuestions() {
                     <>
                         <div className={styles.surveyTopInContactForm}>
                             <h5 className={styles.surveyDescriptionInContactForm}>{SurveyDescription}</h5>
-
                         </div>
+                        <div className={styles.surveyProgressBarInContactForm} />
                         <div className={styles.contactForm}>
 
                             {!isSubmitted ? (
                                 <ContactForm
                                     allAnswers={allAnswers}
                                     butttonPreviousText={butttonPreviousText}
-                                    isClickPrevious={isClickPrevious}
                                     isSubmitted={isSubmitted}
                                     onClickPrevious={handlePrevious}
                                     onSubmitted={handleSubmitted}
@@ -115,6 +116,9 @@ function SyrveyQuestions() {
                                 {questions.length}
                             </p>
 
+                        </div>
+                        <div className={styles.surveyProgressBar}>
+                            <span className={styles.surveyProgressLine} style={{ width: `${progress}%` }} />
                         </div>
                         <div className={styles.surveyContent}>
                             <div className={styles.question}>

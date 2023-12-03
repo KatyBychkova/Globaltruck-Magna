@@ -316,6 +316,26 @@
     background-color: #52c589;
 }
 
+.surveyProgressBar{
+    background-color: #cbcbcb;
+}
+
+.surveyProgressLine{
+    display: block;
+
+    height:4px;
+
+    background-color: #007dfd;
+}
+
+.surveyProgressBarInContactForm{
+    display: block;
+    width: 100%;
+    height:4px;
+
+    background-color: #007dfd;
+}
+
 
 /* .answerInput:after {
     position: relative;

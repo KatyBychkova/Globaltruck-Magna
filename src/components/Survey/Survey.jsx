@@ -18,10 +18,9 @@ const {
 const {
     telephoneTitle, telephone, emailTitle, email,
 } = surveyContacts;
-const modalType = 'modalForm';
 
-function Survey({ openModal, setModal }) {
-    const [isShowModal, setIsShowModal] = useState(true);
+function Survey() {
+    const [isShowModal, setIsShowModal] = useState(false);
 
     const handleClose = () => {
         setIsShowModal(false);
@@ -55,8 +54,7 @@ function Survey({ openModal, setModal }) {
                                 <button
                                     className={styles.callToActionButton}
                                     onClick={() => {
-                                        openModal(true);
-                                        setModal(modalType);
+                                        setIsShowModal(true);
                                     }}
                                 >
                                     text
