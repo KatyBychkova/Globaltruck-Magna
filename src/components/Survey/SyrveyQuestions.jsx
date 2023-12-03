@@ -13,11 +13,10 @@ const {
 
 const validatorConfig = {
     answer: {
-        isRequired: {
+        isChecked: {
             message: 'Пожалуйста, заполните все обязательные поля',
         },
     },
-
 };
 
 function SyrveyQuestions() {
@@ -25,41 +24,26 @@ function SyrveyQuestions() {
     const [showContactForm, setShowContactForm] = useState(false);
     const [selectedOptions, setSelectedOptions] = useState([]);
     const [allAnswers, setAllAnswers] = useState({});
-    const [inputPure, setInputPure] = useState(true);
-    // const [data, setData] = useState(initialData);
-    // const [data, setData] = useState({});
-    const [errors, setErrors] = useState(false);
-    const [userError, setUserError] = useState(null);
+    const [noAnswer, setNoAnswer] = useState(false);
 
     const handlePrevious = () => {
         const prevQues = currentQuestion - 1;
         prevQues >= 0 && setCurrentQuestion(prevQues);
     };
 
-    useEffect(() => {
-        let message = null;
-
-        if (errors) {
-            message = errors.message;
-        }
-        setUserError(message);
-    }, [errors]);
-
-    const validate = () => {
-        const validatorErrors = validator(selectedOptions, validatorConfig);
-        setErrors(validatorErrors);
-        return Object.keys(validatorErrors).length === 0;
-    };
-
-    useEffect(() => {
-        validate();
-    }, [selectedOptions]);
-
     const handleNext = () => {
         const nextQues = currentQuestion + 1;
-        nextQues < questions.length && setCurrentQuestion(nextQues);
+        console.log(selectedOptions.length, nextQues);
+        if (selectedOptions.length < nextQues) {
+            console.log('ошибка');
+            setNoAnswer(true);
+        } else {
+            setNoAnswer(false);
+            nextQues < questions.length && setCurrentQuestion(nextQues);
+        }
     };
     const handleAnswerOption = (answer) => {
+        console.log(answer);
         setSelectedOptions([
             (selectedOptions[currentQuestion] = { answerByUser: answer }),
         ]);
@@ -86,7 +70,6 @@ function SyrveyQuestions() {
                 </h1>
             ) : (
                 <div className={styles.wrapper}>
-
                     <div className={styles.surveyTop}>
                         <h5 className={styles.surveyDescription}>{SurveyDescription}</h5>
 
@@ -105,12 +88,12 @@ function SyrveyQuestions() {
                         <div className={styles.question}>
                             {questions[currentQuestion].question}
                         </div>
-                        <div className={styles.answers}>
+                        <div className={noAnswer ? styles.answersError : styles.answers}>
                             {questions[currentQuestion].answerOptions.map((answerItem, index) => (
                                 <div
                                     key={index}
                                     className={styles.answer}
-                                    onClick={(e) => handleAnswerOption(answerItem.answer)}
+                                    onChange={(e) => handleAnswerOption(answerItem.answer)}
 
                                 >
                                     <input
@@ -121,14 +104,19 @@ function SyrveyQuestions() {
                                         name={answerItem.answer}
                                         type="radio"
                                         value={answerItem.answer}
-                                        onChange={(e) => handleAnswerOption(answerItem.answer)}
                                         // onChange={(e) => handleAnswerOption(e)}
+                                        onChange={(e) => handleAnswerOption(answerItem.answer)}
                                     />
                                     <p className={styles.answerText}>{answerItem.answer}</p>
                                 </div>
                             ))}
 
                         </div>
+                        {noAnswer && (
+                            <div className={styles.errorAlert}>
+                                {validatorConfig.answer.isChecked.message}
+                            </div>
+                        )}
                     </div>
                     <div className={styles.surveyButtons}>
                         <div className={styles.buttons}>
@@ -139,6 +127,17 @@ function SyrveyQuestions() {
                             >
                                 {butttonPreviousText}
                             </button>
+
+                            {/* <button
+                                className={styles.butttonNext}
+                                onClick={
+                                    currentQuestion + 1 === questions.length
+                                        ? handleSubmitButton
+                                        : handleNext
+                                }
+                            >
+                                {currentQuestion + 1 === questions.length ? submitButttonText : butttonNextText }
+                            </button> */}
 
                             <button
                                 className={styles.butttonNext}
