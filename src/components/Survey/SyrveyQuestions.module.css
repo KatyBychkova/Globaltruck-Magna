@@ -173,6 +173,7 @@
 .answer{
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin-bottom: 15px;
 
     font-size: 15px;
@@ -186,23 +187,6 @@
     justify-content: space-between;
 
 }
-
-/* .butttonPreviousWrapper, .butttonNextWrapper {
-    position: relative;
-
-    width: 120px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-
-    color: #fff;
-    font-weight: 700;
-    font-size: 14px;
-   
-    border: none;
-    border-radius: 30px;
-   
-
-} */
 
 .butttonNext, .butttonPrevious{
     position: relative;
@@ -334,10 +318,90 @@
     height:4px;
 
     background-color: #007dfd;
+
 }
 
+/* .answerInput{
+    visibility: hidden;
+}
+.answerInput:after {
+    position: relative;
+    top: -3px;
+    left: -3px;
 
-/* .answerInput:after {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+
+    background-color: #fff;
+    border: 2px solid #989898;
+    border-radius: 50%;
+    visibility: visible;
+    cursor: pointer;
+
+    content: "";
+
+}  
+
+
+.answerInput:checked:after {
+    position: relative;
+    top: -3px;
+    left: -3px;
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+
+   
+
+    background-color: #fff;
+    border: 2px double #b81f1f;
+    border-radius: 24px;
+    visibility: visible;
+    cursor: pointer;
+
+    content: "";
+}  */
+
+
+/* position: relative;
+display: inline-block;
+vertical-align: middle;
+height: 20px;
+width: 20px;
+border-color: #000;
+border-style: solid;
+border-width: 2px;
+box-sizing: border-box;
+border-radius: 50%;
+margin-right: 10px;  */
+
+
+
+/* .answerInput:checked::after{
+    position: relative;
+
+    top: -3px;
+    left: -3px;
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+
+    background-color: #fff;
+  
+    border: 2px solid #000;
+    border-radius: 24px;
+    visibility: visible;
+    cursor: pointer;
+
+    content: "";
+} */
+
+
+/* 
+input[type="radio" i].answerInput   {
     position: relative;
 
     display: inline-block;
@@ -352,22 +416,7 @@
 
     content: "";
 }
-  
-.answerInput:checked:after {
-    position: relative;
 
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-
-    background-color: #4F46E5;
-    border: 2px solid white;
-    border-radius: 24px;
-    visibility: visible;
-    cursor: pointer;
-
-    content: "";
+input[type="radio" i].answerInput:checked::after{
+    border: 2px solid red;
 } */
-
-
-

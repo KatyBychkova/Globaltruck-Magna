@@ -98,6 +98,9 @@
 }
 
 .callToActionButton{
+    position: relative;
+    z-index: 1000;
+
     display: block;
     width: 400px;
     height: 124px;
