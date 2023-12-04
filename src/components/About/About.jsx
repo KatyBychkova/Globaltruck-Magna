@@ -5,7 +5,8 @@ import Header from '@/components/Header/Header.jsx';
 
 import styles from './About.module.css';
 import Modal from '../Modal/Modal.jsx';
-import ModalForm from '../Form/ModalForm.jsx';
+import SubmitIcon from '../../assets/icons/submit.svg';
+import ModalForm from '../ModalForm/ModalForm.jsx';
 
 const { about, afterSubmitText } = content;
 const {
@@ -71,6 +72,7 @@ function About() {
                                             onSubmitted={handleSubmitted}
                                         />
                                     ) : (
+
                                         <div className={styles.afterSubmitContainer}>
                                             <div className={styles.afterSubmit}>
                                                 <div className={styles.afterSubmitText}>

@@ -23,20 +23,21 @@ function ModalSubmitted({ isVisible, onClose }) {
     }
 
     return (
-
-        <div className={styles.container} onClick={onClose}>
-            <div className={styles.wrapper} onClick={(e) => e.stopPropagation()}>
-                <div className={styles.content}>
-                    <div className={styles.icon_wrapper}>
-                        <SubmitIcon height="50" />
-                    </div>
-                    <div className={styles.text}>
-                        Спасибо! Данные успешно отправлены!
-                    </div>
-                    <div className={styles.close_btn}>
-                        <CloseButton onClose={onClose}>
-                            <CrossIcon className={styles.closeCross} />
-                        </CloseButton>
+        <div className={styles.main} onClick={onClose}>
+            <div className={styles.container}>
+                <div className={styles.wrapper} onClick={(e) => e.stopPropagation()}>
+                    <div className={styles.content}>
+                        <div className={styles.icon_wrapper}>
+                            <SubmitIcon height="50" />
+                        </div>
+                        <div className={styles.text}>
+                            Спасибо! Данные успешно отправлены!
+                        </div>
+                        <div className={styles.close_btn}>
+                            <CloseButton onClose={onClose}>
+                                <CrossIcon className={styles.closeCross} />
+                            </CloseButton>
+                        </div>
                     </div>
                 </div>
             </div>
