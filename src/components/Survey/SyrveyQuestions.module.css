@@ -161,6 +161,10 @@
     line-height: 1.5;
 }
 
+.questionCounter{
+    padding-left: 12px;
+}
+
 .answers{
     display: flex;
     flex-direction: column;
@@ -177,8 +181,11 @@
     margin-bottom: 15px;
 
     font-size: 15px;
-   
 
+}
+
+.answerText{
+    margin-left: 10px;
 }
 
 .buttons{
@@ -321,92 +328,14 @@
 
 }
 
-/* .answerInput{
-    visibility: hidden;
-}
-.answerInput:after {
-    position: relative;
-    top: -3px;
-    left: -3px;
-
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-
-    background-color: #fff;
-    border: 2px solid #989898;
-    border-radius: 50%;
-    visibility: visible;
-    cursor: pointer;
-
-    content: "";
-
-}  
 
 
-.answerInput:checked:after {
-    position: relative;
-    top: -3px;
-    left: -3px;
-
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-
-   
-
-    background-color: #fff;
-    border: 2px double #b81f1f;
-    border-radius: 24px;
-    visibility: visible;
-    cursor: pointer;
-
-    content: "";
-}  */
-
-
-/* position: relative;
-display: inline-block;
-vertical-align: middle;
-height: 20px;
-width: 20px;
-border-color: #000;
-border-style: solid;
-border-width: 2px;
-box-sizing: border-box;
-border-radius: 50%;
-margin-right: 10px;  */
-
-
-
-/* .answerInput:checked::after{
-    position: relative;
-
-    top: -3px;
-    left: -3px;
-
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-
-    background-color: #fff;
-  
-    border: 2px solid #000;
-    border-radius: 24px;
-    visibility: visible;
-    cursor: pointer;
-
-    content: "";
-} */
-
-
-/* 
 input[type="radio" i].answerInput   {
     position: relative;
 
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
 
     background-color: #535353;
     border: 2px solid white;
@@ -417,6 +346,74 @@ input[type="radio" i].answerInput   {
     content: "";
 }
 
-input[type="radio" i].answerInput:checked::after{
-    border: 2px solid red;
-} */
+
+@media (max-width: 940px) {
+    .container{
+        max-width: 90vw;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .container{
+        display: block;
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+   
+    .surveyContent, .surveyButtons {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    
+    .surveyTop{
+        align-items: center;
+        height: 62px;
+        padding: 0 25px;
+    }
+
+    .surveyDescription{
+      
+        padding-left: 0;
+    }
+    .surveyDescription::before{
+        display: none;
+    }  
+}
+
+@media (max-width: 480px){
+    .butttonPrevious::before, 
+    .butttonNext::after{
+        display: none;
+    }
+
+    .butttonPrevious, 
+    .butttonNext{
+        width: 90px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .surveyContent, .surveyButtons {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .surveyContent{
+        height: auto;
+    }
+    .surveyTop{
+        align-items: center;
+        height: 62px;
+        padding: 0 15px;
+    }
+    .surveyButtons{
+        padding-top: 20px;
+    }
+    
+    .errorAnswers{
+        padding: 4px;
+    }
+}
+
+

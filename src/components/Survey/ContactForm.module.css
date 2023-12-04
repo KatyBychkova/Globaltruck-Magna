@@ -190,6 +190,11 @@
 
 
 @media (max-width: 640px) {
+    .container{
+        display: block;
+        width: auto;
+        height: 100%;
+    }
       
     .form input {   
         height: 100px;

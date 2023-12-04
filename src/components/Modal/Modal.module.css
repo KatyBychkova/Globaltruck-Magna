@@ -73,11 +73,27 @@
     color: #fff;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 640px) {
     div.main {
         display: block;
-        padding-top: 60px;
+    
         padding-right: 0;
         padding-left: 0;
+    }
+
+    .wrapper{
+        display: block;
+    }
+
+    .container {
+        top: 100px;
+        right: auto;
+        left: auto;
+        z-index: 1;
+
+        display: block;
+
+        height: calc(100% - 100px);
+        margin-top: 0;
     }
 }
