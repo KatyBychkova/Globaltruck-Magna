@@ -143,10 +143,10 @@ function ContactForm({
                             style={
                                 nameDirty && errors.name
                                     ? {
-                                        borderColor: '#d1274a',
+                                        border: '1px solid #d1274a',
                                         boxShadow: 'none',
                                     }
-                                    : { borderColor: '#4a4a4a' }
+                                    : { borderColor: '#b3b3b3' }
                             }
                             type="text"
                             value={data.name}

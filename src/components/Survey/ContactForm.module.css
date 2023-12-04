@@ -53,7 +53,7 @@
 
     border: none;
  
-    border-bottom: 2px solid #b3b3b3 !important;
+    border-bottom: 2px solid #b3b3b3;
     border-radius: 0px;
     outline: none
 }
@@ -84,8 +84,6 @@
 .formSubmit{
     width: 100%;
 }
-
-
 
 .formSubmitBtn {
   
@@ -139,8 +137,6 @@
 
     cursor: pointer;
 }
-
-
 
 
 .butttonPrevious{
@@ -203,18 +199,33 @@
     }
 
     .form input::placeholder {
-  
         font-size: 26px;
-
     }
+   
+    .form input {
+        height: 60px;
+
+        font-size: 14px;
+
+        border-bottom: 1px solid #b3b3b3;
+     
+    }
+
+    .form input::placeholder {
+        font-size: 14px;
+       
+    }
+    /* .formSubmit{
+        margin-top: 10px;
+    } */
+
+  
  
 }
 
 @media (max-width: 480px) {
       
     .form input {   
-        height: 100px;
-
         font-size: 20px;    
         line-height: 31px;   
     }
@@ -223,6 +234,18 @@
         font-size: 20px;    
         line-height: 31px;  
 
+    }
+
+    .buttons{
+        height: 120px;
+    }
+
+    .butttonPrevious, .submitButtton{
+        height: 46px;
+    }
+
+    .submitButtton{
+        align-self: end;
     }
  
 }

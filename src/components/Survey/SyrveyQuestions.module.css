@@ -362,15 +362,19 @@ input[type="radio" i].answerInput   {
         margin: 0;
     }
    
-    .surveyContent, .surveyButtons {
+
+    .surveyContent, .surveyButtons, .surveyTopInContactForm, .contactForm {
         padding-right: 25px;
         padding-left: 25px;
     }
     
-    .surveyTop{
+    .surveyTopInContactForm{
+        font-size: 20px;
+    }
+    .surveyTop, .surveyTopInContactForm{
         align-items: center;
-        height: 62px;
-        padding: 0 25px;
+        min-height: 62px;
+        padding: 20px 25px;
     }
 
     .surveyDescription{
@@ -383,6 +387,8 @@ input[type="radio" i].answerInput   {
 }
 
 @media (max-width: 480px){
+
+  
     .butttonPrevious::before, 
     .butttonNext::after{
         display: none;
