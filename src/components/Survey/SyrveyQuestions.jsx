@@ -6,8 +6,8 @@ import { content } from '@/config/index.js';
 import styles from './SyrveyQuestions.module.css';
 import ContactForm from './ContactForm.jsx';
 
-const { survey } = content;
-const { surveyBlock, afterSubmitText } = survey;
+const { survey, afterSubmitText } = content;
+const { surveyBlock } = survey;
 const {
     SurveyDescription, questions, butttonNextText, butttonPreviousText,
 } = surveyBlock;

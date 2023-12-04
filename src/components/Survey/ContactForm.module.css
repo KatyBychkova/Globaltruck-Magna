@@ -24,10 +24,7 @@
 }
 
 .formInner {
-   
     width: 100%;
-
-
 }
 
 .form {
@@ -214,13 +211,7 @@
     .form input::placeholder {
         font-size: 14px;
        
-    }
-    /* .formSubmit{
-        margin-top: 10px;
-    } */
-
-  
- 
+    } 
 }
 
 @media (max-width: 480px) {

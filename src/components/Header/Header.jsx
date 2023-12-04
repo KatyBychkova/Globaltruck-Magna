@@ -1,16 +1,28 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 import { content } from '@/config/index.js';
 
 import styles from './Header.module.css';
 import GlobaltrackLogoIcon from '../../assets/logo/globaltruck.svg';
 import MagnaLogoIcon from '../../assets/logo/magna.svg';
+import Modal from '../Modal/Modal.jsx';
+import ModalForm from '../Form/ModalForm.jsx';
 
-const { telephoneFormatForLink, header } = content;
+const { telephoneFormatForLink, header, afterSubmitText } = content;
 const { telephone } = header;
-// const modalType = 'modalForm';
 
-function Header({ openModal, setModal }) {
+function Header() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isShowModal, setIsShowModal] = useState(false);
+
+    const handleClose = () => {
+        setIsShowModal(false);
+    };
+
+    const handleSubmitted = () => {
+        setIsSubmitted(true);
+    };
     return (
         <header className={styles.section}>
             <div className={styles.inner}>
@@ -34,8 +46,7 @@ function Header({ openModal, setModal }) {
                                 <button
                                     className={styles.callToActionButton}
                                     onClick={() => {
-                                        openModal(true);
-                                        setModal(modalType);
+                                        setIsShowModal(true);
                                     }}
                                 >
                                     text
@@ -55,6 +66,22 @@ function Header({ openModal, setModal }) {
                 </div>
 
             </div>
+            <Modal isVisible={isShowModal} onClose={handleClose}>
+                {!isSubmitted ? (
+                    <ModalForm
+                        isSubmitted={isSubmitted}
+                        onSubmitted={handleSubmitted}
+                    />
+                ) : (
+                    <div className={styles.afterSubmitContainer}>
+                        <div className={styles.afterSubmit}>
+                            <div className={styles.afterSubmitText}>
+                                {afterSubmitText}
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </Modal>
         </header>
     );
 }

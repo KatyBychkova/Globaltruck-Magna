@@ -5,14 +5,14 @@ import { content } from '@/config/index.js';
 import { validator } from '@/utils/validator.js';
 import inputStyles from '@/styles/inputTelStyles.json';
 
-import styles from './ContactForm.module.css';
+import styles from './ModalForm.module.css';
 
 import 'react-phone-input-2/lib/material.css';
 
 const { survey } = content;
 const { formAfterSurvey } = survey;
 const {
-    placeholderName, labelTelephone, placeholderTelephone, submitButttonText,
+    placeholderName, labelTelephone, placeholderTelephone,
 } = formAfterSurvey;
 const { inputTelStyles, inputTelStylesError } = inputStyles;
 
@@ -49,7 +49,7 @@ const initialData = {
 
 };
 
-function ContactForm({ onSubmitted }) {
+function ModalForm({ onSubmitted, allAnswers }) {
     const [nameDirty, setNameDirty] = useState(false);
     const [telDirty, setTelDirty] = useState(false);
     const [data, setData] = useState(initialData);
@@ -109,7 +109,7 @@ function ContactForm({ onSubmitted }) {
         }
 
         // eslint-disable-next-line no-console
-        console.log(JSON.stringify(data));
+        console.log(JSON.stringify({ ...data, ...allAnswers }));
 
         onSubmitted(true);
 
@@ -117,10 +117,48 @@ function ContactForm({ onSubmitted }) {
     };
 
     return (
+
         <div className={styles.container}>
             <div className={styles.formInner}>
                 <form className={styles.form} onSubmit={handleSubmit}>
-                    <div className={styles.formTel}>
+                    <div
+                        className={
+                            nameDirty && errors.name
+                                ? styles.formError
+                                : styles.formName
+                        }
+                    >
+                        <input
+                            id="name"
+                            name="name"
+                            placeholder={placeholderName}
+                            style={
+                                nameDirty && errors.name
+                                    ? {
+                                        border: '1px solid #d1274a',
+                                        boxShadow: 'none',
+                                    }
+                                    : { borderColor: '#b3b3b3' }
+                            }
+                            type="text"
+                            value={data.name}
+                            onChange={handleNameChange}
+                        />
+                    </div>
+
+                    <div
+                        className={
+                            telDirty && errors.tel
+                                ? styles.formError
+                                : styles.formName
+                        }
+                    >
+                        <label
+                            className={styles.labelTelephone}
+                            htmlFor="tel"
+                        >
+                            {labelTelephone}
+                        </label>
                         <PhoneInput
                             country="ru"
                             error={errors.tel}
@@ -140,52 +178,26 @@ function ContactForm({ onSubmitted }) {
                         />
                     </div>
 
-                    <div
-                        className={
-                            telDirty && errors.tel
-                                ? styles.formError
-                                : styles.formName
-                        }
-                    >
-                        <input
-                            id="name"
-                            name="name"
-                            placeholder={placeholderName}
-                            style={
-                                nameDirty && errors.name
-                                    ? {
-                                        borderColor: '#d1274a',
-                                        boxShadow: 'none',
-                                    }
-                                    : { borderColor: '#064488' }
-                            }
-                            type="text"
-                            value={data.name}
-                            onChange={handleNameChange}
-                        />
-                    </div>
-
                     {userError && (
                         <div className={styles.errorAlertMiddle}>
                             {userError}
                         </div>
                     )}
                     <div className={styles.formSubmit}>
-                        <div>
-                            <button
-                                className={styles.formSubmitBtn}
-                                type="submit"
-                            >
-                                {submitBtnText}
-                            </button>
-                        </div>
+
+                        <button
+                            className={styles.formSubmitBtn}
+                            type="submit"
+                        >
+                            Text
+                        </button>
+
                     </div>
                 </form>
             </div>
 
-            {userError && <div className={styles.errorAlert}>{userError}</div>}
         </div>
     );
 }
 
-export default ContactForm;
+export default ModalForm;

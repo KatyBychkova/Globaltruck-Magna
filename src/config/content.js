@@ -1,4 +1,5 @@
 export const content = {
+    afterSubmitText: 'Спасибо! Данные успешно отправлены.',
     telephoneFormatForLink: '+79090968500',
     header: {
         telephone: '+7(909) 096 85 00',
@@ -101,7 +102,7 @@ export const content = {
     callToAction: {
         title: 'Оставь свои контактные данные',
         subtitle: 'И мы свяжемся с тобой',
-        afterSubmitText: 'Спасибо! Данные успешно отправлены.',
+
     },
 
     form: {

@@ -4,11 +4,10 @@ import { content } from '@/config/index.js';
 import Header from '@/components/Header/Header.jsx';
 
 import styles from './About.module.css';
-import Form from '../Form/Form.jsx';
 import Modal from '../Modal/Modal.jsx';
-// import Modal2 from '../Modal/Modal2.jsx';
+import ModalForm from '../Form/ModalForm.jsx';
 
-const { about } = content;
+const { about, afterSubmitText } = content;
 const {
     title,
     subtitle,
@@ -22,19 +21,11 @@ function About() {
 
     const handleClose = () => {
         setIsShowModal(false);
-        // setIsSubmitted(false);
     };
-
-    // const handleSubmitClose = () => {
-    //     setIsSubmitted(false);
-    //     setIsShowModal(false);
-    // };
 
     const handleSubmitted = () => {
         setIsSubmitted(true);
-        // setIsShowModal(false); // показывает окно Сабмита постоянно,но не блокирет скролл
-        // setIsSubmitted(false);
-        // setIsShowModal(true); // блокирует скролл
+        // setIsShowModal(false);
     };
 
     return (
@@ -72,29 +63,23 @@ function About() {
                                         text
                                     </button>
                                 </div>
-                                {/* <Modal isVisible={isShowModal} onClose={handleClose}>
-                                    <Form
-                                        isSubmitted={isSubmitted}
-                                        onSubmitted={handleSubmitted}
-                                    />
-                                </Modal> */}
 
-                                {!isSubmitted ? (
-                                    <Modal isVisible={isShowModal} onClose={handleClose}>
-                                        <Form
+                                <Modal isVisible={isShowModal} onClose={handleClose}>
+                                    {!isSubmitted ? (
+                                        <ModalForm
                                             isSubmitted={isSubmitted}
                                             onSubmitted={handleSubmitted}
                                         />
-                                    </Modal>
-                                ) : (
-                                    <Modal isVisible={isShowModal} onClose={handleClose}>
-                                        {/* <Form
-                                        isSubmitted={isSubmitted}
-                                        onSubmitted={handleSubmitted}
-                                    /> */}
-                                        <p>ghbdtn</p>
-                                    </Modal>
-                                )}
+                                    ) : (
+                                        <div className={styles.afterSubmitContainer}>
+                                            <div className={styles.afterSubmit}>
+                                                <div className={styles.afterSubmitText}>
+                                                    {afterSubmitText}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </Modal>
 
                             </div>
                         </div>
