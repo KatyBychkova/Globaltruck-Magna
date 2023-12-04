@@ -97,7 +97,7 @@ function Form({ onSubmitted }) {
         // eslint-disable-next-line no-console
         console.log(JSON.stringify(data));
 
-        onSubmitted(true); // устанавливает значение IsSubmitted(true) в About
+        onSubmitted(true);
 
         cleanForm();
     };

@@ -7,7 +7,7 @@ import styles from './Header.module.css';
 import GlobaltrackLogoIcon from '../../assets/logo/globaltruck.svg';
 import MagnaLogoIcon from '../../assets/logo/magna.svg';
 import Modal from '../Modal/Modal.jsx';
-import ModalForm from '../ModalForm/ModalForm.jsx';
+import ModalForm from '../Modal/ModalForm.jsx';
 
 const { telephoneFormatForLink, header, afterSubmitText } = content;
 const { telephone } = header;

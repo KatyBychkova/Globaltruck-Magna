@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useState } from 'react';
 
 import { content } from '@/config/index.js';
@@ -6,7 +5,6 @@ import { content } from '@/config/index.js';
 import styles from './CallToAction.module.css';
 import ModalSubmitted from '../Modal/ModalSubmitted.jsx';
 import Form from './Form.jsx';
-import Modal from '../Modal/Modal';
 
 const { callToAction } = content;
 const { title, subtitle } = callToAction;

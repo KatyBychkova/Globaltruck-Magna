@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { content } from '@/config/index.js';
 
 import styles from './SyrveyQuestions.module.css';
-import ContactForm from './ContactForm.jsx';
+import SurveyForm from './SurveyForm.jsx';
 
 const { survey, afterSubmitText } = content;
 const { surveyBlock } = survey;
@@ -22,7 +22,7 @@ const validatorConfig = {
 
 function SyrveyQuestions() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [showContactForm, setShowContactForm] = useState(false);
+    const [showSurveyForm, setShowSurveyForm] = useState(false);
     const [selectedOptions, setSelectedOptions] = useState([]);
     const [allAnswers, setAllAnswers] = useState({});
     const [noAnswer, setNoAnswer] = useState(false);
@@ -33,7 +33,7 @@ function SyrveyQuestions() {
         const prevQues = currentQuestion - 1;
 
         prevQues >= 0 && setCurrentQuestion(prevQues);
-        setShowContactForm(false);
+        setShowSurveyForm(false);
     };
 
     const handleNext = () => {
@@ -41,7 +41,7 @@ function SyrveyQuestions() {
         setProgress(100 / questions.length * (currentQuestion + 1));
 
         if (currentQuestion + 1 === questions.length) {
-            setShowContactForm(true);
+            setShowSurveyForm(true);
         }
         // проверка отмечен ли ответ
         if (selectedOptions.length < nextQues) {
@@ -64,7 +64,7 @@ function SyrveyQuestions() {
     };
 
     const handleSubmitSurveyButton = () => {
-        setShowContactForm(true);
+        setShowSurveyForm(true);
     };
 
     const handleSubmitted = () => {
@@ -76,16 +76,16 @@ function SyrveyQuestions() {
         <div className={styles.container}>
             <div className={styles.wrapper}>
 
-                {showContactForm ? (
+                {showSurveyForm ? (
                     <>
-                        <div className={styles.surveyTopInContactForm}>
-                            <h5 className={styles.surveyDescriptionInContactForm}>{SurveyDescription}</h5>
+                        <div className={styles.surveyTopInSurveyForm}>
+                            <h5 className={styles.surveyDescriptionInSurveyForm}>{SurveyDescription}</h5>
                         </div>
-                        <div className={styles.surveyProgressBarInContactForm} />
-                        <div className={styles.contactForm}>
+                        <div className={styles.surveyProgressBarInSurveyForm} />
+                        <div className={styles.surveyForm}>
 
                             {!isSubmitted ? (
-                                <ContactForm
+                                <SurveyForm
                                     allAnswers={allAnswers}
                                     butttonPreviousText={butttonPreviousText}
                                     isSubmitted={isSubmitted}

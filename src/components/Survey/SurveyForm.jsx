@@ -5,7 +5,7 @@ import { content } from '@/config/index.js';
 import { validator } from '@/utils/validator.js';
 import inputStyles from '@/styles/inputTelStyles.json';
 
-import styles from './ContactForm.module.css';
+import styles from './SurveyForm.module.css';
 
 import 'react-phone-input-2/lib/material.css';
 
@@ -49,7 +49,7 @@ const initialData = {
 
 };
 
-function ContactForm({
+function SurveyForm({
     onSubmitted, allAnswers, onClickPrevious, butttonPreviousText,
 }) {
     const [nameDirty, setNameDirty] = useState(false);
@@ -78,9 +78,6 @@ function ContactForm({
 
     const handleClickPrevious = () => {
         onClickPrevious(true);
-        // onSubmitted(true);
-
-        // cleanForm();
     };
 
     const handleNameChange = (e) => {
@@ -220,4 +217,4 @@ function ContactForm({
     );
 }
 
-export default ContactForm;
+export default SurveyForm;

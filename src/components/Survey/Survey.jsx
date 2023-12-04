@@ -4,11 +4,10 @@ import { useState } from 'react';
 
 import { content } from '@/config/index.js';
 import surveyBgImage from '@/assets/images/survey-image.png';
-import surveySpeedIcon from '@/assets/icons/speed.svg';
 
 import styles from './Survey.module.css';
-import Modal from '../Modal/Modal';
-import SyrveyQuestions from './SyrveyQuestions';
+import Modal from '../Modal/Modal.jsx';
+import SyrveyQuestions from './SyrveyQuestions.jsx';
 
 const { survey, telephoneFormatForLink } = content;
 const { surveyContacts, surveyBlock } = survey;

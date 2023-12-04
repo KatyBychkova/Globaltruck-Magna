@@ -5,8 +5,7 @@ import Header from '@/components/Header/Header.jsx';
 
 import styles from './About.module.css';
 import Modal from '../Modal/Modal.jsx';
-import SubmitIcon from '../../assets/icons/submit.svg';
-import ModalForm from '../ModalForm/ModalForm.jsx';
+import ModalForm from '../Modal/ModalForm.jsx';
 
 const { about, afterSubmitText } = content;
 const {
@@ -26,7 +25,6 @@ function About() {
 
     const handleSubmitted = () => {
         setIsSubmitted(true);
-        // setIsShowModal(false);
     };
 
     return (
