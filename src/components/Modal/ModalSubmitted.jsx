@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import {
     lock as scrollLock,
-    unlock as scrollUnlock,
+    clearBodyLocks as scrollUnlock,
 } from 'tua-body-scroll-lock';
 
 import CrossIcon from '../../assets/icons/cross.svg';
@@ -10,13 +10,10 @@ import CloseButton from './CloseButton.jsx';
 import styles from './ModalSubmitted.module.css';
 
 function ModalSubmitted({ isVisible, onClose }) {
-    console.log('---isVisible', isVisible);
     useEffect(() => {
         if (isVisible) {
-            console.log('---ModalSubmitted::lock');
             scrollLock();
         } else {
-            console.log('---ModalSubmitted::unlock');
             scrollUnlock();
         }
     });

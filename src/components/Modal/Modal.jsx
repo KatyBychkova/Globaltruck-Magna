@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import {
     lock as scrollLock,
-    unlock as scrollUnlock,
+    clearBodyLocks as scrollUnlock,
 } from 'tua-body-scroll-lock';
 
 import CrossIcon from '../../assets/icons/cross.svg';
@@ -11,10 +11,8 @@ import styles from './Modal.module.css';
 function Modal({ isVisible, onClose, children }) {
     useEffect(() => {
         if (isVisible) {
-            console.log('---Modal::lock');
             scrollLock();
         } else {
-            console.log('---Modal::unlock');
             scrollUnlock();
         }
     });
