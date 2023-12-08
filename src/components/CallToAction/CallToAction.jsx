@@ -33,20 +33,11 @@ function CallToAction() {
                     isSubmitted={isSubmitted}
                     onSubmitted={handleSubmitted}
                 />
-
-                {isSubmitted ? (
-
+                {isSubmitted && (
                     <ModalSubmitted
                         isVisible={isShowModal}
                         onClose={handleClose}
-                    >
-                        {' '}
-                        <p>ghjhdkfs</p>
-
-                    </ModalSubmitted>
-
-                ) : (
-                    <i />
+                    />
                 )}
             </div>
 

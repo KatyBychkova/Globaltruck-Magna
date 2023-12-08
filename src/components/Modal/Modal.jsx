@@ -11,8 +11,10 @@ import styles from './Modal.module.css';
 function Modal({ isVisible, onClose, children }) {
     useEffect(() => {
         if (isVisible) {
+            console.log('---Modal::lock');
             scrollLock();
         } else {
+            console.log('---Modal::unlock');
             scrollUnlock();
         }
     });

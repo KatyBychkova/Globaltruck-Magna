@@ -10,10 +10,13 @@ import CloseButton from './CloseButton.jsx';
 import styles from './ModalSubmitted.module.css';
 
 function ModalSubmitted({ isVisible, onClose }) {
+    console.log('---isVisible', isVisible);
     useEffect(() => {
         if (isVisible) {
+            console.log('---ModalSubmitted::lock');
             scrollLock();
         } else {
+            console.log('---ModalSubmitted::unlock');
             scrollUnlock();
         }
     });
