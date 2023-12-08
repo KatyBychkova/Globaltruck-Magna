@@ -24,24 +24,21 @@
 
 .terms,
 .developedByLink,
-.copy{
+.copy {
     color: transparent;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.55;
- 
     text-decoration: none;
 
     background-color: transparent;
-
     background-image: var(--gradient);    
-
     background-clip: text;
     border-style: solid;
 
 }
 
-.developedByLink{
+.developedByLink {
     cursor: pointer;
 }
 
@@ -53,19 +50,20 @@
     text-decoration: none;
 }
 
-@media (max-width: 1200px) {
-    .wrapper{
+@media (width <= 1200px) {
+    .wrapper {
         gap: 0;
         height: 150px;
     }
 
-    .terms, .copy{
+    .terms, .copy {
         align-self: start;
     }
 
 }
-@media (max-width: 960px) {
-    .wrapper{
+
+@media (width <= 960px) {
+    .wrapper {
         flex-direction: column;
         justify-content: space-between;
         padding: 10px;
@@ -78,14 +76,15 @@
 
 }
 
-@media (max-width: 480px) {
-    .wrapper{
+@media (width <= 480px) {
+    .wrapper {
         gap: 0;
         height: 120px;
     }
+
     .terms,
     .developedByLink,
-    .copy{       
+    .copy {       
         font-size: 18px;
         line-height: 1.55;
     }

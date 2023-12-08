@@ -1,19 +1,24 @@
 :root {
-    --main-color: #333ee6;
-    --minor-color: #4a4a4a;
-    --gradient: linear-gradient(318deg, rgba(25,121,242,1) 0%, rgba(64,181,251,1) 100%);
+    /* Colors */
+    --color-red-500: #ef4444;
+    --color-blue: #333ee6;
+    --color-text-blue: var(--color-blue);
+    --color-text-danger: var(--color-red-500);
+    --gradient: linear-gradient(318deg, rgb(25 121 242 / 100%) 0%, rgb(64 181 251 / 100%) 100%);
+
+    /* Container */
     --container-width: 1180px;
     --content-width: 960px;
 } 
 
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
     :root {
         --container-width: 940px;
         --content-width: 940px;
     }
 }
 
-@media (max-width: 960px) {
+@media (width <= 960px) {
     :root {
         --container-width: 630px;
         --content-width: 630px;
@@ -21,7 +26,7 @@
     }
 }
 
-@media (max-width: 640px) {
+@media (width <= 640px) {
     :root {
         --container-width: 520px;
         --content-width: 520px;
@@ -29,7 +34,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     :root {
         --container-width: 340px;
         --content-width: 340px;

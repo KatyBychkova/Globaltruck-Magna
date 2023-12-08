@@ -4,8 +4,7 @@
     overflow: hidden;
 
     background-color: #2b99f3;
-    
-    background-image: url(../../assets/images/survey-background.jpg);
+    background-image: url("../../assets/images/survey-background.jpg");
     background-repeat: no-repeat;
     background-size: cover
 }
@@ -22,11 +21,12 @@
     justify-content: left;
 }
 
-.survey{
+.survey {
     flex: 0 0 50%;
     align-self: start;
 }
-.surveyWrapper{
+
+.surveyWrapper {
     box-sizing: border-box;
     max-width: 540px;
     padding: 80px;
@@ -35,11 +35,10 @@
     border-radius: 10px;
 }
 
-.speed{
+.speed {
     position: relative;
 
     margin-bottom: 40px;
-
     padding-left: 30px;
 
     color: #6a6a6a;
@@ -48,17 +47,16 @@
     line-height: 37px;
 }
 
-.speed::before{
+.speed::before {
     position: absolute;
     top: 60%;
     left: 0;
 
     display: block;
-
     width: 20px;
     height:20px;
 
-    background-image: url(../../assets/icons/speed.svg);
+    background-image: url("../../assets/icons/speed.svg");
     background-repeat: no-repeat;
     background-size: contain;
     transform: translateY(-65%);
@@ -66,69 +64,60 @@
     content: ""
 }
 
-.title{
+.title {
     max-width: 460px;  
     margin-bottom: 40px;
 
     color: transparent;
     font-weight: 800;
     font-size: 48px;
-
     line-height: 62px;
     text-decoration: none;
 
     background-color: transparent;
-
     background-image: var(--gradient);    
-
     background-clip: text;
     border-style: solid;
 }
 
-.subtitles{
+.subtitles {
     max-width: 340px;
     margin-bottom: 60px;
 
     color: #4a4a4a;
     font-weight: 500;
     font-size: 32px;
-
     line-height: 1.5;  
 
 }
 
-.callToActionButton{
+.callToActionButton {
     position: relative;
     z-index: 1000;
 
     display: block;
     width: 400px;
     height: 124px;
-    padding: 0px 15px;
-  
+    padding: 0 15px;
 
     color: transparent;
-
-
     text-decoration: none;
 
     background-color: transparent;
-    background-image: url(../../assets/images/survey-button.svg);
+    background-image: url("../../assets/images/survey-button.svg");
     background-repeat: no-repeat;
     background-size: contain;
-
     border: none;
     cursor: pointer;
 }
 
 .imageInner {
     flex: 1 1 50%;
- 
     align-self: start;
 
 }
 
-.imageWrapper{
+.imageWrapper {
     /* max-width: 560px; */
     position: relative;
     left: -400px;
@@ -141,7 +130,7 @@ img.image {
     object-fit: contain;
 }
 
-.contacts{
+.contacts {
     display: flex;
     justify-content: space-between;
 
@@ -149,8 +138,8 @@ img.image {
 }
 
 .telephoneTitle,
-.emailTitle{
-    color: #ffffff;
+.emailTitle {
+    color: #fff;
     font-weight: 700;
     font-size: 24px;
     line-height: 1.55;
@@ -161,8 +150,8 @@ img.image {
 }
 
 .telephoneLink,
-.emaiLink{
-    color: #ffffff;
+.emaiLink {
+    color: #fff;
     font-weight: 800;
     font-size: 40px;
     line-height: 1.55;
@@ -173,8 +162,7 @@ img.image {
 
 
 
-@media screen and (max-width: 1200px) {
-  
+@media screen and (width <= 1200px) {
     img.image {
         position: relative;
         top: -40px;
@@ -183,7 +171,7 @@ img.image {
         width: 800px;
     }
     
-    .contacts{
+    .contacts {
         flex-direction: column;
         gap: 20px;
         padding-top: 60px;
@@ -191,29 +179,31 @@ img.image {
  
 }
 
-@media screen and (max-width: 960px) {
-    .section{
+@media screen and (width <= 960px) {
+    .section {
         padding-top: 60px;
 
     }
-    .wrapper{
+
+    .wrapper {
         flex-direction: column-reverse;      
     }
 
 
-    .surveyWrapper{
+    .surveyWrapper {
         max-width: 560px;
     }
+
     .imageInner {
         display: block;
-       
         margin-bottom: 30px;
         overflow: hidden;
 
         transform: translateX(-20%);
     
     }
-    .imageWrapper{
+
+    .imageWrapper {
         position: unset;
     }
 
@@ -222,65 +212,73 @@ img.image {
 
         width: 600px;
     }
-    .contacts{
+
+    .contacts {
         align-self: center;
     }
 }
 
-@media screen and (max-width: 640px) {
-    .speed, .title, .subtitles{
+@media screen and (width <= 640px) {
+    .speed, .title, .subtitles {
         margin-bottom: 15px;
     }
+
     img.image {
         position: unset;
 
         width: 450px;
     }
+
     .imageInner {  
         transform: translateX(-10%);    
     }
+
     .telephoneLink,
-    .emaiLink{    
+    .emaiLink {    
         font-size: 28px;
         line-height: 43px;     
     } 
   
-    .surveyWrapper{
+    .surveyWrapper {
         max-width: 480px;
         padding: 35px;
     }
 }
 
 
-@media screen and (max-width: 530px) {
-    .callToActionButton{     
+@media screen and (width <= 530px) {
+    .callToActionButton {     
         max-width: 300px;
         height: 100px;      
     }
 
-    .surveyWrapper{
+    .surveyWrapper {
         max-width: 450px;
         padding: 50px;
     }
 }
-@media screen and (max-width: 480px) {
-    .section{
+
+@media screen and (width <= 480px) {
+    .section {
         padding: 60px 0;
     }
-    .imageInner{
+
+    .imageInner {
         display: none;
     }
-    .callToActionButton{     
+
+    .callToActionButton {     
         margin-bottom: 30px;     
     }
-    .surveyWrapper{
+
+    .surveyWrapper {
         max-width: 340px;
         padding: 20px;
 
         text-align: center;
     }
 
-    .speed{
+    .speed {
         padding: 0;
 
         font-size: 12px;
@@ -288,33 +286,32 @@ img.image {
 
     }   
     
-    .speed::before{
+    .speed::before {
         top: 68%;
         left: 49px;
- 
+
         width: 15px;
         height: 15px;
     }
     
-    .title{     
+    .title {     
         font-size: 40px;    
         line-height: 52px;    
     }
     
-    .subtitles p{ 
+    .subtitles p { 
         font-size: 16px;    
         line-height: 24px;     
     }
 
-    .contacts{
+    .contacts {
         padding-top: 45px;
 
       
     }
 
   
-    .emailTitle, .telephoneTitle, .emaiLink{     
-
+    .emailTitle, .telephoneTitle, .emaiLink {     
         font-size: 20px;
         line-height: 31px;
     } 

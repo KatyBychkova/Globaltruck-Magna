@@ -20,7 +20,6 @@
     align-items: center;
     box-sizing: border-box;
     width: 100%;
- 
     overflow: hidden;
 
     color: var(--title-minor-color);
@@ -36,7 +35,6 @@
     flex-direction: column;
     gap: 20px;
     justify-content: space-between;
-
     margin-bottom: 20px;
 }
 
@@ -61,47 +59,41 @@
     padding: 0;
     padding-left: 10px;
 
-    color: #aaaaaa;
+    color: #aaa;
     font-weight: 300;
     font-size: 32px;
     line-height: 0;
 }
-.formSubmit{
+
+.formSubmit {
     width: 100%;
 }
 
 .formSubmit div {
     display: flex;
-
     justify-content: center;
-   
+
     border-radius: 10px;
 }
 
 .formSubmitBtn {
-  
     width: 600px;
     max-width: 600px;
     height: 125px;
-    padding: 15px 15px;
-  
+    padding: 15px;
 
     color: transparent;
-
-
     text-decoration: none;
 
     background-color: transparent;
-    background-image: url(../../assets/images/send-data-button.svg);
+    background-image: url("../../assets/images/send-data-button.svg");
     background-repeat: no-repeat;
     background-size: contain;
-
     border: none;
     cursor: pointer;
 }
 
-@media (max-width: 640px) {
-      
+@media (width <= 640px) {
     .form input {   
         height: 100px;
 
@@ -109,15 +101,13 @@
     }
 
     .form input::placeholder {
-  
         font-size: 26px;
 
     }
  
 }
 
-@media (max-width: 480px) {
-      
+@media (width <= 480px) {
     .form input {   
         height: 100px;
 

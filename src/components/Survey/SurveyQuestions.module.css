@@ -4,42 +4,31 @@
     max-width: var(--content-width);
     padding-top: 5px;
 
-    color: red;
+    color: var(--color-text-danger);
     font-size: 12px;
     text-align: left;
-
-
 }
 
-.errorAnswers{
-    padding: 10px;
-
-    border: solid 1px red;
-}
-
-.container{  
+.container {  
     display: flex;
     width: 900px;
     max-width: 80vw;
-                      
     min-height: 464px;
     margin: 0 auto;
- 
 
     background: #fff;
-
     cursor: default
 }
-.wrapper{
+
+.wrapper {
     width: 100%;
 
 
 }
 
-.surveyForm{
+.surveyForm {
     padding-top: 35px;
     padding-right: 45px;
-
     padding-left: 45px;
 
     background-color: #fff;
@@ -47,45 +36,38 @@
 
 .surveyTop, .surveyTopInSurveyForm {
     display: flex;
-
     justify-content: space-between;
     box-sizing: border-box;
     width: 100%;
-
-    padding-top: 35px;
-    padding-right: 45px;
-    padding-bottom: 40px;
-    padding-left: 45px;
+    padding: 35px 45px 40px;
 
     background-color: #ececec;
 }
 
-.surveyDescriptionInSurveyForm{
+.surveyDescriptionInSurveyForm {
     font-weight: 400;
     font-size: 20px;
     line-height: 1.5;
 }
 
-.surveyContent{
+.surveyContent {
     box-sizing: border-box;
+
     width: 100%;
     height: 285px;
     min-height: 185px;
-    padding-top: 35px;
-    padding-right: 45px;
-    padding-bottom: 40px;
-    padding-left: 45px;
-}
-
-.surveyButtons{
-    padding-top: 35px;
-    padding-right: 45px;
-    padding-bottom: 40px;
-    padding-left: 45px;
+    padding: 35px 45px 40px;
 
     background-color: #fff;
 }
-.surveyDescription{
+
+.surveyButtons {
+    padding: 35px 45px 40px;
+
+    background-color: #fff;
+}
+
+.surveyDescription {
     position: relative;
 
     padding-left: 22px;
@@ -95,17 +77,16 @@
     line-height: 1.5;
 }
 
-.surveyDescription::before{
+.surveyDescription::before {
     position: absolute;
     top: 60%;
     left: 0;
 
     display: block;
-
     width: 20px;
     height:20px;
 
-    background-image: url(../../assets/icons/surveyDescriptionIcon.svg);
+    background-image: url("../../assets/icons/surveyDescriptionIcon.svg");
     background-repeat: no-repeat;
     background-size: contain;
     transform: translateY(-65%);
@@ -113,24 +94,15 @@
     content: ""
 }
 
-.questionCounter{
+.questionCounter {
+    padding-left: 12px;
+
     font-weight: 500;
     font-size: 12px;
     line-height: 1.5;
 }
 
-.surveyContent{
-    width: 100%;
-
-    padding-top: 35px;
-    padding-right: 45px;
-    padding-bottom: 40px;
-    padding-left: 45px;
-
-    background-color: #fff;
-}
-
-.question{
+.question {
     margin-bottom: 12px;
     padding-bottom: 5px;
 
@@ -139,20 +111,14 @@
     line-height: 1.5;
 }
 
-.questionCounter{
-    padding-left: 12px;
-}
-
-.answers{
+.answers {
     display: flex;
     flex-direction: column;
-   
     width: 100%;
-    margin-bottom: 50px;
 }
 
 
-.answer{
+.answer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -160,20 +126,21 @@
 
     font-size: 15px;
 
+    cursor: pointer;
 }
 
-.answerText{
+.answerText {
     margin-left: 10px;
 }
 
-.buttons{
+.buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
 
-.buttonNext, .buttonPrevious{
+.buttonNext, .buttonPrevious {
     position: relative;
 
     width: 120px;
@@ -181,37 +148,33 @@
     padding-bottom: 12px;
 
     color: #fff;
-
     font-weight: 700;
     font-size: 14px;
- 
 
     background-color: transparent;
-   
     border: none;
     border-radius: 30px;
-
     cursor: pointer;
 }
 
 
-.buttonPrevious{
+.buttonPrevious {
     padding-left: 20px;
 
     background-color:  #cbcbcb;
 
 }
-.buttonNext{
+
+.buttonNext {
     padding-right: 20px;
 
     background-color:  #007dfd;
 }
 
 
-.buttonPrevious::before{
+.buttonPrevious::before {
     position: absolute;
     top: 50%;
-   
 
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
@@ -222,42 +185,33 @@
     content: " →";
 }
 
-.buttonNext::after{
+.buttonNext::after {
     position: absolute;
     top: 50%;
-    right: 0px;
+    right: 0;
 
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.3;
-
-
 
     transform: translateX(-100%) translateY(-50%);
 
     content: " →";
 }
 
-.buttonNextWithoutArrow{
-    
+.buttonNextWithoutArrow {
     width: 120px;
     padding-top: 12px;
-   
     padding-bottom: 12px;
 
     color: #fff;
-
     font-weight: 700;
     font-size: 14px;
- 
 
     background-color: transparent;
-
     background-color:  #007dfd;
-   
     border: none;
     border-radius: 30px;
-
     cursor: pointer;
 }
 
@@ -275,19 +229,18 @@
     background-color: #52c589;
 }
 
-.surveyProgressBar{
+.surveyProgressBar {
     background-color: #cbcbcb;
 }
 
-.surveyProgressLine{
+.surveyProgressLine {
     display: block;
-
     height:4px;
 
     background-color: #007dfd;
 }
 
-.surveyProgressBarInSurveyForm{
+.surveyProgressBarInSurveyForm {
     display: block;
     width: 100%;
     height:4px;
@@ -315,15 +268,15 @@ input[type="radio" i].answerInput   {
 }
 
 
-@media (max-width: 940px) {
-    .container{
+@media (width <= 940px) {
+    .container {
         max-width: 90vw;
     }
 }
 
 
-@media (max-width: 640px) {
-    .container{
+@media (width <= 640px) {
+    .container {
         display: block;
         max-width: 100%;
         height: 100%;
@@ -336,34 +289,33 @@ input[type="radio" i].answerInput   {
         padding-left: 25px;
     }
     
-    .surveyTopInSurveyForm{
+    .surveyTopInSurveyForm {
         font-size: 20px;
     }
-    .surveyTop, .surveyTopInSurveyForm{
+
+    .surveyTop, .surveyTopInSurveyForm {
         align-items: center;
         min-height: 62px;
         padding: 20px 25px;
     }
 
-    .surveyDescription{
-      
+    .surveyDescription {
         padding-left: 0;
     }
-    .surveyDescription::before{
+
+    .surveyDescription::before {
         display: none;
     }  
 }
 
-@media (max-width: 480px){
-
-  
+@media (width <= 480px){
     .buttonPrevious::before, 
-    .buttonNext::after{
+    .buttonNext::after {
         display: none;
     }
 
     .buttonPrevious, 
-    .buttonNext{
+    .buttonNext {
         width: 90px;
         padding-right: 0;
         padding-left: 0;
@@ -373,20 +325,19 @@ input[type="radio" i].answerInput   {
         padding-right: 15px;
         padding-left: 15px;
     }
-    .surveyContent{
+
+    .surveyContent {
         height: auto;
     }
-    .surveyTop{
+
+    .surveyTop {
         align-items: center;
         height: 62px;
         padding: 0 15px;
     }
-    .surveyButtons{
+
+    .surveyButtons {
         padding-top: 20px;
-    }
-    
-    .errorAnswers{
-        padding: 4px;
     }
 }
 

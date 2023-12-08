@@ -1,5 +1,4 @@
 .section {
-  
     padding: 15px 0;
 
     background-color: #39a8f9;
@@ -7,7 +6,6 @@
 
 .container {
     display: flex;
-
     align-items: center;
     justify-content: center;
     max-width: var(--content-width);

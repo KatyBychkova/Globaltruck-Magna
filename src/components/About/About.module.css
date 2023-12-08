@@ -1,8 +1,7 @@
 .section {
     box-sizing: border-box;
 
-   
-    background-image: url(../../assets/images/main-background.jpg);
+    background-image: url("../../assets/images/main-background.jpg");
     background-repeat: no-repeat;
     background-size: cover
 }
@@ -10,10 +9,9 @@
 .inner {
     max-width: 1920px;
     margin: 0 auto;
-    
     overflow: hidden;
 
-    background-image: url(../../assets/images/main-image.png);
+    background-image: url("../../assets/images/main-image.png");
     background-repeat: no-repeat;
     background-position: top 40px center;
     background-size: cover;
@@ -27,29 +25,28 @@
 }
 
 
-.content{
+.content {
     display: flex;
-
     justify-content: flex-end;
     width: 100%;
     padding-bottom: 20px;
 }
 
-.description{
+.description {
     flex: 1 1 50%;
     max-width: 550px;
     margin-top: 60px;
     margin-bottom: 230px;
 }
 
-.descriptionWithTitle{
+.descriptionWithTitle {
     margin-bottom: 80px;
 }
 
 .title {
     margin-bottom: 20px;
 
-    color: var(--main-color);
+    color: var(--color-text-blue);
     font-weight: 500;
     font-size: 24px;
     line-height: 37px;
@@ -59,70 +56,61 @@
 .subtitle {
     margin-bottom: 30px;
 
-    color: var(--main-color);
+    color: var(--color-text-blue);
     font-weight: 800;
     font-size: 66px;
     line-height: 70px;
 }
 
-.descriptionWithPositivePoint{
+.descriptionWithPositivePoint {
     display: flex;
-
     flex: 0 0 50%;
     flex-direction: column;
     box-sizing: border-box;
     width: 100%;
-   
     padding: 55px;
 
     font-weight: 400;
-
     font-size: 28px;
-
-
     line-height: 38px;
-    
+
     background-color: #fff;
     border-radius: 10px;
 }
 
-.positivePointAllText{
+.positivePointAllText {
     margin-bottom: 40px;
 }
 
-.positivePoint{
-    color: var(--main-color);
+.positivePoint {
+    color: var(--color-text-blue);
     font-weight: 800;
 }
 
-.callToActionButton{
+.callToActionButton {
     display: block;
     width: 360px;
     height: 100px;
-    padding: 0px 15px;
-  
+    padding: 0 15px;
 
     color: transparent;
-
-
     text-decoration: none;
 
     background-color: transparent;
-    background-image: url(../../assets/images/send-form-button.svg);
+    background-image: url("../../assets/images/send-form-button.svg");
     background-repeat: no-repeat;
     background-size: contain;
-
     border: none;
     cursor: pointer;
 }
-.afterSubmitContainer{
+
+.afterSubmitContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 70vw;
     max-width: var(--content-width);
     padding: 40px;
-
     overflow: hidden;
 }
 
@@ -140,7 +128,7 @@
     background-color: #52c589;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (width <= 1400px) {
     .inner {
         background-position: top 40px left -25vw;
     }
@@ -148,7 +136,7 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (width <= 1200px) {
     .inner {
         background-position: top 40px left -22vw;
     } 
@@ -158,67 +146,65 @@
         line-height: 66px;
     }
 
-    .description{
+    .description {
         max-width: 520px;
         margin-top: 60px;
         margin-bottom: 50px;
     }
 
-    .descriptionWithTitle{
+    .descriptionWithTitle {
         margin-bottom: 50px;
     }
 
-    .descriptionWithPositivePoint{   
+    .descriptionWithPositivePoint {   
         padding: 40px;
     }
 }
 
 
-@media screen and (max-width: 1100px) {
+@media screen and (width <= 1100px) {
     .inner {
         background-position: top 40px left -35vw;
     } 
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (width <= 960px) {
     .section {
         background-position: left 35% bottom; 
     }
 
     .inner {
         min-height: 1440px;
- 
+
         background-position: left 6vw bottom; 
         background-size: 110% ;
     }   
 
-    .content{
+    .content {
         display: block;
          
     }
     
 }
 
-@media (max-width: 740px) {
+@media (width <= 740px) {
     .inner {
         min-height: 1400px;
 
         background-position: left bottom;
-    
         background-size: 125% ; 
    
     }  
 }
 
-@media (max-width: 640px) {
-
-    .afterSubmitContainer{
+@media (width <= 640px) {
+    .afterSubmitContainer {
         display: block;
         width: auto;
         height: 100%;
     }
 
-    .description{  
+    .description {  
         margin-top: 10px;      
     }
 
@@ -230,61 +216,56 @@
 
     .title {
         margin-bottom: 18px;
-    
+
         font-size: 20px;
         line-height: 31px;        
     }
     
     .subtitle {    
         margin-bottom: 10px;
-         
+
         font-size: 53px;
         line-height: 48px;
     }
 
-    .descriptionWithPositivePoint{
+    .descriptionWithPositivePoint {
         padding: 30px;
        
     }
     
-    .positivePointAllText{
+    .positivePointAllText {
         margin-bottom: 30px;
-    }
-
-    .afterSubmitContainer{
-        display: block;
-        width: auto;
-        height: 100%;
     }
 }
 
 
-@media (max-width: 560px) {
+@media (width <= 560px) {
     .inner { 
         background-size: 165% ;
     }  
 }
 
-@media (max-width: 480px) {
-    .description{
-  
-        margin-top: 0px;
+@media (width <= 480px) {
+    .description {
+        margin-top: 0;
       
     }
+
     .inner {
         min-height: 1100px;
 
         background-size: 155% ; 
    
     }  
-    .descriptionWithTitle{
+
+    .descriptionWithTitle {
         margin-bottom: 20px;
     }
+
     .title {
         width: 250px;
-
         margin-bottom: 6px;
-    
+
         font-size: 24px;
         line-height: 37px;
         
@@ -292,12 +273,12 @@
     
     .subtitle {
         width: 220px;
-             
+
         font-size: 40px;
         line-height: 44px;
     }
 
-    .positivePointAllText{
+    .positivePointAllText {
         font-size: 20px;
         line-height: 26px;
     }
@@ -305,7 +286,8 @@
     .descriptionWithPositivePoint {
         padding: 20px;
     }
-    .callToActionButton{
+
+    .callToActionButton {
         width: 300px;
         height: 87px;
    
@@ -313,19 +295,18 @@
 
 }
 
-@media (max-width: 440px) {
+@media (width <= 440px) {
     .inner {
         min-height: 1100px; 
 
         background-position: left 10% bottom;
-
         background-size: 175% ;
     }  
     
 }
 
-@media (max-width: 340px) {
-    .callToActionButton{
+@media (width <= 340px) {
+    .callToActionButton {
         width: 100%;
         max-width: 300px;
         height: 87px;

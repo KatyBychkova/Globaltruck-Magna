@@ -15,7 +15,7 @@ const {
 const validatorConfig = {
     answer: {
         isChecked: {
-            message: 'Пожалуйста, заполните все обязательные поля',
+            message: 'Пожалуйста, выберите один из вариантов ответа',
         },
     },
 };
@@ -40,20 +40,20 @@ function SurveyQuestions() {
     };
 
     const handleNext = () => {
-        const nextQues = currentQuestion + 1;
-        setProgress((100 / questions.length) * (currentQuestion + 1));
+        const nextQuestion = currentQuestion + 1;
 
         if (currentQuestion + 1 === questions.length) {
             setShowSurveyForm(true);
         }
         // проверка отмечен ли ответ
-        if (selectedOptions.length < nextQues) {
+        if (selectedOptions.length < nextQuestion) {
             setNoAnswer(true);
         } else {
             setNoAnswer(false);
+            setProgress((100 / questions.length) * (currentQuestion + 1));
 
-            if (nextQues < questions.length) {
-                setCurrentQuestion(nextQues);
+            if (nextQuestion < questions.length) {
+                setCurrentQuestion(nextQuestion);
             }
         }
     };
@@ -114,11 +114,10 @@ function SurveyQuestions() {
                             <h5 className={styles.surveyDescription}>{SurveyDescription}</h5>
 
                             <p className={styles.questionCounter}>
-
                                 {currentQuestion + 1}
-
+                                {' '}
                                 /
-
+                                {' '}
                                 {questions.length}
                             </p>
 
@@ -130,9 +129,9 @@ function SurveyQuestions() {
                             <div className={styles.question}>
                                 {questions[currentQuestion].question}
                             </div>
-                            <div className={noAnswer ? styles.errorAnswers : styles.answers}>
+                            <div className={styles.answers}>
                                 {questions[currentQuestion].answerOptions.map((answerItem) => (
-                                    <div
+                                    <label
                                         key={answerItem.answer}
                                         className={styles.answer}
                                         onChange={() => handleAnswerOption(answerItem.answer)}
@@ -148,7 +147,7 @@ function SurveyQuestions() {
                                             onChange={() => handleAnswerOption(answerItem.answer)}
                                         />
                                         <p className={styles.answerText}>{answerItem.answer}</p>
-                                    </div>
+                                    </label>
                                 ))}
 
                             </div>

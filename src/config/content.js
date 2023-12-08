@@ -1,8 +1,10 @@
+const year = new Date().getFullYear();
+
 export const content = {
     afterSubmitText: 'Спасибо! Данные успешно отправлены.',
     telephoneFormatForLink: '+79090968500',
     header: {
-        telephone: '+7(909) 096 85 00',
+        telephone: '+7 (909) 096 85 00',
     },
     about: {
         title: 'Дальнобойщик! Вакансия для тебя:',
@@ -97,7 +99,7 @@ export const content = {
             href: 'https://smm-rapport.ru/',
         },
 
-        copy: `© ${new Date().getFullYear()} Все права защищены`,
+        copy: `© ${year} Все права защищены`,
     },
     callToAction: {
         title: 'Оставь свои контактные данные',
@@ -111,7 +113,7 @@ export const content = {
 
     },
     footer: {
-        copy: `© ${new Date().getFullYear()} Все права защищены`,
+        copy: `© ${year} Все права защищены`,
     },
 
 };

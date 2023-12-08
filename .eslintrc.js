@@ -53,10 +53,12 @@ module.exports = {
             ],
         }],
 
+        'jsx-a11y/label-has-associated-control': [ERROR, {
+            assert: 'either',
+        }],
         'jsx-a11y/click-events-have-key-events': OFF, // todo
         'jsx-a11y/no-static-element-interactions': OFF, // todo
         'react-hooks/exhaustive-deps': OFF, // todo
-        'max-len': OFF, // todo
         'import/prefer-default-export': OFF,
 
         // React

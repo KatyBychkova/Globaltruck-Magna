@@ -1,69 +1,69 @@
 @font-face {
     font-weight: 400;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy Regular"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-weight: 700;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy Bold"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-weight: 900;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy Black"), url("../fonts/Gilroy-Black.ttf") format("truetype");
 }
 
 @font-face {
     font-weight: 300;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy Light"), url("../fonts/Gilroy-Light.ttf") format("truetype");
 }
 
 @font-face {
     font-weight: 600;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy Semibold"), url("../fonts/Gilroy-Semibold.ttf") format("truetype");
 }
 
 @font-face {
     font-weight: 500;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy Medium"), url("../fonts/Gilroy-Medium.ttf") format("truetype");
 }
 
 @font-face {
     font-weight: 200;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy UltraLight"), url("../fonts/Gilroy-UltraLight.ttf") format("truetype");
 }
 
 @font-face {
     font-weight: 800;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy Extrabold"), url("../fonts/Gilroy-Extrabold.ttf") format("truetype");
 }
 
 @font-face {
     font-weight: 900;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy Heavy"), url("../fonts/Gilroy-Heavy.ttf") format("truetype");
 }
 
 @font-face {
     font-weight: 100;
-    font-family: "Gilroy";
+    font-family: Gilroy;
     font-style: normal;
     src: local("Gilroy Thin"), url("../fonts/Gilroy-Thin.ttf") format("truetype");
 }

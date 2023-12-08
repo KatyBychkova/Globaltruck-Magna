@@ -19,7 +19,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-
     overflow: hidden;
 }
 
@@ -33,7 +32,6 @@
     flex-direction: column;
     gap: 20px;
     justify-content: space-between;
-
     margin-bottom: 20px;
 }
 
@@ -44,22 +42,19 @@
     width: 100%;
     height: 60px;
     padding: 0;
-   
 
     font-size: 16px;
 
     border: none;
- 
     border-bottom: 2px solid #b3b3b3;
-    border-radius: 0px;
+    border-radius: 0;
     outline: none
 }
 
 .form input::placeholder {
     padding: 0;
-   
 
-    color: #aaaaaa;
+    color: #aaa;
     font-weight: 300;
     font-size: 16px;
     line-height: 0;
@@ -70,7 +65,7 @@
     box-shadow: none !important;
 }
 
-.labelTelephone{
+.labelTelephone {
     display: block;
     margin-top: 20px;
 
@@ -78,34 +73,29 @@
     font-size: 12px;
 }
 
-.formSubmit{
+.formSubmit {
     width: 100%;
 }
 
 .formSubmitBtn {
-  
     width: 600px;
     max-width: 600px;
     height: 125px;
-    padding: 15px 15px;
-  
+    padding: 15px;
 
     color: transparent;
-
-
     text-decoration: none;
 
     background-color: transparent;
-    background-image: url(../../assets/images/send-data-button.svg);
+    background-image: url("../../assets/images/send-data-button.svg");
     background-repeat: no-repeat;
     background-size: contain;
-
     border: none;
     cursor: pointer;
 }
 
 
-.buttons{
+.buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -115,28 +105,24 @@
 }
 
 
-.buttonNext, .buttonPrevious{
+.buttonNext, .buttonPrevious {
     position: relative;
 
     width: 120px;
     padding: 14px 0;
 
     color: #fff;
-
     font-weight: 700;
     font-size: 14px;
- 
 
     background-color: transparent;
-   
     border: none;
     border-radius: 30px;
-
     cursor: pointer;
 }
 
 
-.buttonPrevious{
+.buttonPrevious {
     padding-left: 20px;
 
     background-color:  #cbcbcb;
@@ -144,10 +130,9 @@
 }
 
 
-.buttonPrevious::before{
+.buttonPrevious::before {
     position: absolute;
     top: 50%;
-   
 
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
@@ -158,64 +143,45 @@
     content: " →";
 }
 
-.submitbutton{
-    
+.submitbutton {
     width: 170px;
     padding: 14px 0;
 
     color: #fff;
-
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
- 
 
     background-color: transparent;
-
     background-color:  #007dfd;
-   
     border: none;
     border-radius: 30px;
-
     cursor: pointer;
 }
 
 
 
-@media (max-width: 640px) {
-    .container{
+@media (width <= 640px) {
+    .container {
         display: block;
         width: auto;
         height: 100%;
     }
       
     .form input {   
-        height: 100px;
-
-        font-size: 26px;    
-    }
-
-    .form input::placeholder {
-        font-size: 26px;
-    }
-   
-    .form input {
         height: 60px;
 
         font-size: 14px;
 
         border-bottom: 1px solid #b3b3b3;
-     
     }
 
     .form input::placeholder {
         font-size: 14px;
-       
-    } 
+    }
 }
 
-@media (max-width: 480px) {
-      
+@media (width <= 480px) {
     .form input {   
         font-size: 20px;    
         line-height: 31px;   
@@ -227,15 +193,15 @@
 
     }
 
-    .buttons{
+    .buttons {
         height: 120px;
     }
 
-    .buttonPrevious, .submitbutton{
+    .buttonPrevious, .submitbutton {
         height: 46px;
     }
 
-    .submitbutton{
+    .submitbutton {
         align-self: end;
     }
  

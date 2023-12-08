@@ -1,9 +1,7 @@
 .main {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
+
     z-index: 10000;
 
     display: flex;
@@ -12,7 +10,7 @@
 
     color: black;
 
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(0 0 0 / 60%);
     outline: 0;
     cursor: pointer;
 
@@ -44,6 +42,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -72,15 +71,14 @@
     color: #fff;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (width <= 640px) {
     div.main {
         display: block;
-    
         padding-right: 0;
         padding-left: 0;
     }
 
-    .wrapper{
+    .wrapper {
         display: block;
     }
 
@@ -91,7 +89,6 @@
         z-index: 1;
 
         display: block;
-
         height: calc(100% - 100px);
         margin-top: 0;
     }

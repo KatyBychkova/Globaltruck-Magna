@@ -1,23 +1,18 @@
 .section {
     margin: 0 auto;
-
-    margin: 0 auto;
     padding: 30px 0;
- 
 
     background-color: transparent;
 }
 
-.inner{
+.inner {
     display: flex;
-
     justify-content: flex-end;
     width: 100%;
     padding-bottom: 20px;
 }
 
 .wrapper {
-
     display: flex;
     flex: 0 0 50%;
     flex-direction: row;
@@ -31,15 +26,14 @@
 }
 
 .logosWrapper,
-.contactWrapper{
+.contactWrapper {
     display: flex;
     flex-direction: column;
     gap: 30px;
-
     justify-content: flex-end;
 }
 
-.contactWrapper{
+.contactWrapper {
     align-items: center;
 }
 
@@ -51,54 +45,45 @@
 
 
 .telephoneLink {
- 
     min-width: 145px;
 
     color: transparent;
     font-weight: 700;
     font-size: 20px;
-
     line-height: 28px;
     text-decoration: none;
 
     background-color: transparent;
-
     background-image: var(--gradient);    
-
     background-clip: text;
     border-style: solid;
     cursor: pointer;
 }
 
-.callToActionButton{
+.callToActionButton {
     display: block;
     width: 300px;
     height: 84px;
-    padding: 0px 15px;
-  
+    padding: 0 15px;
 
     color: transparent;
-
-
     text-decoration: none;
 
     background-color: transparent;
-    background-image: url(../../assets/images/send-form-button.svg);
+    background-image: url("../../assets/images/send-form-button.svg");
     background-repeat: no-repeat;
     background-size: contain;
-
     border: none;
     cursor: pointer;
 }
 
-.afterSubmitContainer{
+.afterSubmitContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 70vw;
     max-width: var(--content-width);
     padding: 40px;
-
     overflow: hidden;
 }
 
@@ -117,43 +102,43 @@
 }
 
 
-@media screen and (max-width: 960px) {
-    .inner{
+@media screen and (width <= 960px) {
+    .inner {
         display: block; 
     }  
 }
 
-@media (max-width: 640px) {
-    .callToActionButton{
+@media (width <= 640px) {
+    .callToActionButton {
         width: 235px;
         height: 61px;     
     }
-    .telephoneLink{
+
+    .telephoneLink {
         font-size: 16px;
         line-height: 25px;
     }
-    .logosWrapper,
-    .contactWrapper{
-   
-        gap: 10px;
 
+    .logosWrapper,
+    .contactWrapper {
+        gap: 10px;
         justify-content: flex-end;
     }
 
-    .logo1 svg{
+    .logo1 svg {
         width: 120px;
         height: 40px;
      
     }
 
-    .logo2 svg{
+    .logo2 svg {
         width: 180px;
         height: 40px;
      
     }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
     .wrapper {
         flex-direction: column;      
     }
@@ -163,31 +148,34 @@
         margin-bottom: 15px;    
     }
     
-    .contactWrapper{
+    .contactWrapper {
         display: flex;
         flex-direction: column-reverse; 
       
     }
-    .callToActionButton{
+
+    .callToActionButton {
         width: 164px;
         height: 48px;     
     }
-    .telephoneLink{
+
+    .telephoneLink {
         font-size: 20px;
         line-height: 25px;
     }
-    .logo1, .logo2{
+
+    .logo1, .logo2 {
         flex: 0 1 auto;
     }
 
-    .logo1 svg{
+    .logo1 svg {
         width: 100%;
         max-width: 120px;
         height: 40px;
      
     }
 
-    .logo2 svg{
+    .logo2 svg {
         width: 100%;
         max-width: 180px;
         height: 40px;
