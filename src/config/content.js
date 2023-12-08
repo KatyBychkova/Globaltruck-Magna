@@ -69,8 +69,8 @@ export const content = {
                 },
 
             ],
-            butttonNextText: 'Далее',
-            butttonPreviousText: 'Назад',
+            buttonNextText: 'Далее',
+            buttonPreviousText: 'Назад',
         },
         surveyContacts: {
             telephoneTitle: 'Звони нам',
@@ -84,13 +84,13 @@ export const content = {
 
             placeholderTelephone: '+7 (999) 999-99-99',
 
-            submitButttonText: 'Узнать результат',
+            submitbuttonText: 'Узнать результат',
 
         },
         afterSubmitText: 'Спасибо! Данные успешно отправлены.',
 
     },
-    infopanel: {
+    infoPanel: {
         terms: 'Политика конфиденциальности',
         developedBy: {
             name: 'Разработано командой «Раппорт»',

@@ -3,13 +3,13 @@ import { useState } from 'react';
 
 import { content } from '@/config/index.js';
 
-import styles from './SyrveyQuestions.module.css';
+import styles from './SurveyQuestions.module.css';
 import SurveyForm from './SurveyForm.jsx';
 
 const { survey, afterSubmitText } = content;
 const { surveyBlock } = survey;
 const {
-    SurveyDescription, questions, butttonNextText, butttonPreviousText,
+    SurveyDescription, questions, buttonNextText, buttonPreviousText,
 } = surveyBlock;
 
 const validatorConfig = {
@@ -20,7 +20,7 @@ const validatorConfig = {
     },
 };
 
-function SyrveyQuestions() {
+function SurveyQuestions() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showSurveyForm, setShowSurveyForm] = useState(false);
     const [selectedOptions, setSelectedOptions] = useState([]);
@@ -32,13 +32,16 @@ function SyrveyQuestions() {
     const handlePrevious = () => {
         const prevQues = currentQuestion - 1;
 
-        prevQues >= 0 && setCurrentQuestion(prevQues);
+        if (prevQues >= 0) {
+            setCurrentQuestion(prevQues);
+        }
+
         setShowSurveyForm(false);
     };
 
     const handleNext = () => {
         const nextQues = currentQuestion + 1;
-        setProgress(100 / questions.length * (currentQuestion + 1));
+        setProgress((100 / questions.length) * (currentQuestion + 1));
 
         if (currentQuestion + 1 === questions.length) {
             setShowSurveyForm(true);
@@ -48,7 +51,10 @@ function SyrveyQuestions() {
             setNoAnswer(true);
         } else {
             setNoAnswer(false);
-            nextQues < questions.length && setCurrentQuestion(nextQues);
+
+            if (nextQues < questions.length) {
+                setCurrentQuestion(nextQues);
+            }
         }
     };
 
@@ -87,7 +93,7 @@ function SyrveyQuestions() {
                             {!isSubmitted ? (
                                 <SurveyForm
                                     allAnswers={allAnswers}
-                                    butttonPreviousText={butttonPreviousText}
+                                    buttonPreviousText={buttonPreviousText}
                                     isSubmitted={isSubmitted}
                                     onClickPrevious={handlePrevious}
                                     onSubmitted={handleSubmitted}
@@ -125,11 +131,11 @@ function SyrveyQuestions() {
                                 {questions[currentQuestion].question}
                             </div>
                             <div className={noAnswer ? styles.errorAnswers : styles.answers}>
-                                {questions[currentQuestion].answerOptions.map((answerItem, index) => (
+                                {questions[currentQuestion].answerOptions.map((answerItem) => (
                                     <div
-                                        key={index}
+                                        key={answerItem.answer}
                                         className={styles.answer}
-                                        onChange={(e) => handleAnswerOption(answerItem.answer)}
+                                        onChange={() => handleAnswerOption(answerItem.answer)}
                                     >
                                         <input
                                             checked={
@@ -139,7 +145,7 @@ function SyrveyQuestions() {
                                             name={answerItem.answer}
                                             type="radio"
                                             value={answerItem.answer}
-                                            onChange={(e) => handleAnswerOption(answerItem.answer)}
+                                            onChange={() => handleAnswerOption(answerItem.answer)}
                                         />
                                         <p className={styles.answerText}>{answerItem.answer}</p>
                                     </div>
@@ -156,25 +162,25 @@ function SyrveyQuestions() {
                             <div className={styles.buttons}>
 
                                 <button
-                                    className={styles.butttonPrevious}
+                                    className={styles.buttonPrevious}
                                     onClick={handlePrevious}
                                 >
-                                    {butttonPreviousText}
+                                    {buttonPreviousText}
                                 </button>
 
                                 {currentQuestion + 1 === questions.length ? (
                                     <button
-                                        className={styles.butttonNextWithoutArrow}
+                                        className={styles.buttonNextWithoutArrow}
                                         onClick={handleSubmitSurveyButton}
                                     >
-                                        {butttonNextText}
+                                        {buttonNextText}
                                     </button>
                                 ) : (
                                     <button
-                                        className={styles.butttonNext}
+                                        className={styles.buttonNext}
                                         onClick={handleNext}
                                     >
-                                        {butttonNextText}
+                                        {buttonNextText}
                                     </button>
                                 )}
 
@@ -190,4 +196,4 @@ function SyrveyQuestions() {
     );
 }
 
-export default SyrveyQuestions;
+export default SurveyQuestions;

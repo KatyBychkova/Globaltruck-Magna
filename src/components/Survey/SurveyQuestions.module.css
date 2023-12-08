@@ -173,7 +173,7 @@
 
 }
 
-.butttonNext, .butttonPrevious{
+.buttonNext, .buttonPrevious{
     position: relative;
 
     width: 120px;
@@ -195,20 +195,20 @@
 }
 
 
-.butttonPrevious{
+.buttonPrevious{
     padding-left: 20px;
 
     background-color:  #cbcbcb;
 
 }
-.butttonNext{
+.buttonNext{
     padding-right: 20px;
 
     background-color:  #007dfd;
 }
 
 
-.butttonPrevious::before{
+.buttonPrevious::before{
     position: absolute;
     top: 50%;
    
@@ -222,7 +222,7 @@
     content: " →";
 }
 
-.butttonNext::after{
+.buttonNext::after{
     position: absolute;
     top: 50%;
     right: 0px;
@@ -238,7 +238,7 @@
     content: " →";
 }
 
-.butttonNextWithoutArrow{
+.buttonNextWithoutArrow{
     
     width: 120px;
     padding-top: 12px;
@@ -357,13 +357,13 @@ input[type="radio" i].answerInput   {
 @media (max-width: 480px){
 
   
-    .butttonPrevious::before, 
-    .butttonNext::after{
+    .buttonPrevious::before, 
+    .buttonNext::after{
         display: none;
     }
 
-    .butttonPrevious, 
-    .butttonNext{
+    .buttonPrevious, 
+    .buttonNext{
         width: 90px;
         padding-right: 0;
         padding-left: 0;

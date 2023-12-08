@@ -1,6 +1,6 @@
 import About from '@/components/About/About.jsx';
 import Survey from '@/components/Survey/Survey.jsx';
-import Infopanel from '@/components/Infopanel/Infopanel.jsx';
+import InfoPanel from '@/components/InfoPanel/InfoPanel.jsx';
 import CallToAction from '@/components/CallToAction/CallToAction.jsx';
 
 function MainPage() {
@@ -8,9 +8,8 @@ function MainPage() {
         <>
             <About />
             <Survey />
-            <Infopanel />
+            <InfoPanel />
             <CallToAction />
-
         </>
     );
 }

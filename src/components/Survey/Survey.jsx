@@ -7,7 +7,7 @@ import surveyBgImage from '@/assets/images/survey-image.png';
 
 import styles from './Survey.module.css';
 import Modal from '../Modal/Modal.jsx';
-import SyrveyQuestions from './SyrveyQuestions.jsx';
+import SurveyQuestions from './SurveyQuestions.jsx';
 
 const { survey, telephoneFormatForLink } = content;
 const { surveyContacts, surveyBlock } = survey;
@@ -105,7 +105,7 @@ function Survey() {
                     </div>
                 </div>
                 <Modal isVisible={isShowModal} onClose={handleClose}>
-                    <SyrveyQuestions onClose={handleClose} />
+                    <SurveyQuestions onClose={handleClose} />
                 </Modal>
 
             </div>

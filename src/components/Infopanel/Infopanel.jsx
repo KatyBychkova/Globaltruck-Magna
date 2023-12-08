@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 import { content } from '@/config/index.js';
 
-import styles from './Infopanel.module.css';
+import styles from './InfoPanel.module.css';
 
-const { infopanel } = content;
-const { terms, developedBy, copy } = infopanel;
+const { infoPanel } = content;
+const { terms, developedBy, copy } = infoPanel;
 
-function Infopanel() {
+function InfoPanel() {
     return (
         <section className={`${styles.section} ${styles.container}`}>
             <div className={styles.wrapper}>
@@ -28,4 +28,4 @@ function Infopanel() {
     );
 }
 
-export default Infopanel;
+export default InfoPanel;

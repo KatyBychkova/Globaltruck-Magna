@@ -167,11 +167,11 @@
         height: 120px;
     }
 
-    .butttonPrevious, .submitButtton{
+    .buttonPrevious, .submitbutton{
         height: 46px;
     }
 
-    .submitButtton{
+    .submitbutton{
         align-self: end;
     }
  

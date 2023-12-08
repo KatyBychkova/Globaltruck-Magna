@@ -12,7 +12,7 @@ import 'react-phone-input-2/lib/material.css';
 const { survey } = content;
 const { formAfterSurvey } = survey;
 const {
-    placeholderName, labelTelephone, placeholderTelephone, submitButttonText,
+    placeholderName, labelTelephone, placeholderTelephone, submitbuttonText,
 } = formAfterSurvey;
 const { inputTelStyles, inputTelStylesError } = inputStyles;
 
@@ -50,7 +50,7 @@ const initialData = {
 };
 
 function SurveyForm({
-    onSubmitted, allAnswers, onClickPrevious, butttonPreviousText,
+    onSubmitted, allAnswers, onClickPrevious, buttonPreviousText,
 }) {
     const [nameDirty, setNameDirty] = useState(false);
     const [telDirty, setTelDirty] = useState(false);
@@ -194,17 +194,17 @@ function SurveyForm({
                             <div className={styles.buttons}>
 
                                 <button
-                                    className={styles.butttonPrevious}
+                                    className={styles.buttonPrevious}
                                     onClick={handleClickPrevious}
                                 >
-                                    {butttonPreviousText}
+                                    {buttonPreviousText}
                                 </button>
 
                                 <button
-                                    className={styles.submitButtton}
+                                    className={styles.submitbutton}
                                     type="submit"
                                 >
-                                    {submitButttonText}
+                                    {submitbuttonText}
                                 </button>
                             </div>
 
